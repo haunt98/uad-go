@@ -46,3 +46,8 @@ clean:
 
 upstream:
 	curl https://raw.githubusercontent.com/0x192/universal-android-debloater/main/resources/assets/uad_lists.json --output uad_lists.json
+	curl https://raw.githubusercontent.com/MuntashirAkon/android-debloat-list/master/aosp.json --output adl_aosp.json
+	curl https://raw.githubusercontent.com/MuntashirAkon/android-debloat-list/master/carrier.json --output adl_carrier.json
+	curl https://raw.githubusercontent.com/MuntashirAkon/android-debloat-list/master/google.json --output adl_google.json
+	curl https://raw.githubusercontent.com/MuntashirAkon/android-debloat-list/master/misc.json --output adl_misc.json
+	curl https://raw.githubusercontent.com/MuntashirAkon/android-debloat-list/master/oem.json --output adl_oem.json
