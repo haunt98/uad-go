@@ -1,7 +1,7 @@
 .PHONY: all test test-color coverage coverage-cli coverate-html lint format build clean upstream
 
 all:
-	upstream
+	$(MAKE) upstream
 	go mod tidy
 	$(MAKE) test-color
 	$(MAKE) lint
