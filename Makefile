@@ -34,7 +34,7 @@ format:
 	go install mvdan.cc/gofumpt@latest
 	gofimports -w --company github.com/make-go-great,github.com/haunt98 .
 	gofumpt -w -extra .
-	deno fmt uad_lists.json
+	deno fmt data/*.json
 
 build:
 	$(MAKE) clean
