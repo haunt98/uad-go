@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.0.2 (2023-09-05)
+
+### Added
+
+- feat: remove partly uad (2023-09-05)
+
+- feat: use unified models (2023-09-05)
+
+- feat: download adl (2023-09-05)
+
+### Others
+
+- chore(changelog): generate v0.0.1 (2023-09-05)
+
 ## v0.0.1 (2023-09-05)
 
 ### Added
