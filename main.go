@@ -13,23 +13,22 @@ import (
 	"github.com/samber/lo"
 )
 
-//go:embed uad_lists.json
-var uadBytes []byte
+var (
+	//go:embed adl_aosp.json
+	adlAOSPBytes []byte
 
-//go:embed adl_aosp.json
-var adlAOSP []byte
+	//go:embed adl_carrier.json
+	adlCarrierBytes []byte
 
-//go:embed adl_carrier.json
-var adlCarrier []byte
+	//go:embed adl_google.json
+	adlGoogleBytes []byte
 
-//go:embed adl_google.json
-var adlGoogle []byte
+	//go:embed adl_misc.json
+	adlMiscBytes []byte
 
-//go:embed adl_misc.json
-var adlMisc []byte
-
-//go:embed adl_oem.json
-var adlOEM []byte
+	//go:embed adl_oem.json
+	adlOEMBytes []byte
+)
 
 func main() {
 	findStr := os.Getenv("FIND")
@@ -38,7 +37,10 @@ func main() {
 	}
 	findStr = strings.ToLower(findStr)
 
-	apps := handleUAD(findStr)
+	adlApps := handleADL(findStr)
+
+	apps := make([]UnifiedApp, 0, len(adlApps))
+	apps = append(apps, adlApps...)
 
 	for _, a := range apps {
 		color.Green("ID: %s", a.ID)
@@ -48,44 +50,60 @@ func main() {
 	}
 }
 
-func handleUAD(findStr string) []UnifiedApp {
-	uadApps := UADApps{}
-	if err := json.Unmarshal(uadBytes, &uadApps); err != nil {
-		slog.Error("json: failed to unmarshal apps", err)
-		return nil
+func handleADL(findStr string) []UnifiedApp {
+	adlApps := ADLApps{}
+	for _, bytes := range [][]byte{
+		adlAOSPBytes,
+		adlCarrierBytes,
+		adlGoogleBytes,
+		adlMiscBytes,
+		adlOEMBytes,
+	} {
+		adlSubApps := ADLApps{}
+		if err := json.Unmarshal(bytes, &adlSubApps); err != nil {
+			slog.Error("json: failed to unmarshal apps", err)
+			return nil
+		}
+
+		adlApps = append(adlApps, adlSubApps...)
 	}
 
-	apps := lo.FilterMap(uadApps, func(a UADApp, i int) (UnifiedApp, bool) {
+	apps := lo.FilterMap(adlApps, func(a ADLApp, i int) (UnifiedApp, bool) {
 		// Only get recommend
-		if a.Removal != UADRemovalRecommended {
+		if a.Removal != ADLRemovalDelete {
 			return UnifiedApp{}, false
 		}
 
 		a.ID = strings.TrimSpace(a.ID)
-		a.Description = strings.TrimSpace(a.Description)
+		description := strings.TrimSpace(a.Description) + " " + strings.TrimSpace(a.Warning)
 
 		// Find it
 		if strings.Contains(strings.ToLower(a.ID), findStr) {
 			return UnifiedApp{
 				ID:          a.ID,
-				Description: a.Description,
+				Description: description,
+			}, true
+		}
+
+		if strings.Contains(strings.ToLower(a.Label), findStr) {
+			return UnifiedApp{
+				ID:          a.ID,
+				Description: description,
 			}, true
 		}
 
 		if strings.Contains(strings.ToLower(a.Description), findStr) {
 			return UnifiedApp{
 				ID:          a.ID,
-				Description: a.Description,
+				Description: description,
 			}, true
 		}
 
-		for _, label := range a.Labels {
-			if strings.Contains(strings.ToLower(label), findStr) {
-				return UnifiedApp{
-					ID:          a.ID,
-					Description: a.Description,
-				}, true
-			}
+		if strings.Contains(strings.ToLower(a.Warning), findStr) {
+			return UnifiedApp{
+				ID:          a.ID,
+				Description: description,
+			}, true
 		}
 
 		return UnifiedApp{}, false
