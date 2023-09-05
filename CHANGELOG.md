@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v0.0.3 (2023-09-05)
+
+### Added
+
+- feat: add back uad mode (2023-09-05)
+
+### Others
+
+- chore(changelog): generate v0.0.2 (2023-09-05)
+
 ## v0.0.2 (2023-09-05)
 
 ### Added
