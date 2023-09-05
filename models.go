@@ -1,18 +1,11 @@
 package main
 
 // https://github.com/0x192/universal-android-debloater/wiki/FAQ
+const UADRemovalRecommended = "Recommended"
 
-const (
-	RemovalRecommended = "Recommended"
-	RemovalAdvanced    = "Advanced"
-	RemovalExpert      = "Expert"
-	RemovalUnsafe      = "Unsafe"
-)
+type UADApps []UADApp
 
-// Copy def from uad
-type Apps []App
-
-type App struct {
+type UADApp struct {
 	ID           string   `json:"id,omitempty"`
 	List         string   `json:"list,omitempty"`
 	Description  string   `json:"description,omitempty"`
@@ -20,4 +13,24 @@ type App struct {
 	NeededBy     []string `json:"neededBy,omitempty"`
 	Labels       []string `json:"labels,omitempty"`
 	Removal      string   `json:"removal,omitempty"`
+}
+
+// https://github.com/MuntashirAkon/android-debloat-list
+const ADLRemovalDelete = "delete"
+
+type ADLApps []ADLApp
+
+type ADLApp struct {
+	ID           string   `json:"id,omitempty"`
+	Label        string   `json:"label,omitempty"`
+	Description  string   `json:"description,omitempty"`
+	Removal      string   `json:"removal,omitempty"`
+	Warning      string   `json:"warning,omitempty"`
+	Dependencies []string `json:"dependencies,omitempty"`
+	RequiredBy   []string `json:"required_by,omitempty"`
+}
+
+type UnifiedApp struct {
+	ID          string
+	Description string
 }
