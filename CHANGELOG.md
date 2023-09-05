@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v0.0.4 (2023-09-05)
+
+### Others
+
+- chore: update goreleaser (2023-09-05)
+
+- chore: fix lint (2023-09-05)
+
+- chore(changelog): generate v0.0.3 (2023-09-05)
+
 ## v0.0.3 (2023-09-05)
 
 ### Added
