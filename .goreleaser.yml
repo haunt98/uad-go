@@ -2,7 +2,7 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - main: ./cmd/changeloguru
+  - main: .
     goos:
       - linux
       - windows
