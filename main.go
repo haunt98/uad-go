@@ -42,11 +42,17 @@ func main() {
 
 	var apps []UnifiedApp
 
-	if strings.EqualFold(strings.TrimSpace(os.Getenv("MODE")), "uad") {
-		apps = handleUAD(findStr)
-	} else {
-		// Default mode is adl
-		apps = handleADL(findStr)
+	// Loop all data sources
+	// Stop if found
+	// Otherwise keep going
+	for _, findFn := range []func(string) []UnifiedApp{
+		handleADL,
+		handleUAD,
+	} {
+		apps = findFn(findStr)
+		if len(apps) != 0 {
+			break
+		}
 	}
 
 	for _, a := range apps {
