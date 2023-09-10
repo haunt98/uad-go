@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.0.5 (2023-09-10)
+
+### Added
+
+- feat: remove MODE env, loop all data sources instead (2023-09-10)
+
+### Others
+
+- chore(deps): bump actions/checkout from 3 to 4 (2023-09-05)
+
+- chore(changelog): generate v0.0.4 (2023-09-05)
+
 ## v0.0.4 (2023-09-05)
 
 ### Others
