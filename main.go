@@ -21,17 +21,24 @@ func main() {
 	if findStr == "" {
 		return
 	}
-	findStr = strings.ToLower(findStr)
+	findStr = strings.ToLower(strings.TrimSpace(findStr))
+
+	// For example xiaomi+miui
+	// Use + instead of | because | is unix pipe
+	values := strings.Split(findStr, "+")
+	values = lo.Filter(values, func(v string, i int) bool {
+		return strings.TrimSpace(v) != ""
+	})
 
 	var apps []UnifiedApp
 
 	// Loop all data sources
 	// Stop if found
 	// Otherwise keep going
-	for _, findFn := range []func(string) []UnifiedApp{
-		handleUAD,
+	for _, findFn := range []func(...string) []UnifiedApp{
+		searchUAD,
 	} {
-		apps = findFn(findStr)
+		apps = findFn(values...)
 		if len(apps) != 0 {
 			break
 		}
@@ -45,7 +52,7 @@ func main() {
 	}
 }
 
-func handleUAD(findStr string) []UnifiedApp {
+func searchUAD(values ...string) []UnifiedApp {
 	uadApps := UADApps{}
 	if err := json.Unmarshal(uadBytes, &uadApps); err != nil {
 		slog.Error("json: failed to unmarshal apps", err)
@@ -61,26 +68,28 @@ func handleUAD(findStr string) []UnifiedApp {
 		description := strings.TrimSpace(a.Description)
 
 		// Find it
-		if strings.Contains(strings.ToLower(a.ID), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
-		}
-
-		if strings.Contains(strings.ToLower(a.Description), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
-		}
-
-		for _, label := range a.Labels {
-			if strings.Contains(strings.ToLower(label), findStr) {
+		for _, value := range values {
+			if strings.Contains(strings.ToLower(a.ID), value) {
 				return UnifiedApp{
 					ID:          a.ID,
 					Description: description,
 				}, true
+			}
+
+			if strings.Contains(strings.ToLower(a.Description), value) {
+				return UnifiedApp{
+					ID:          a.ID,
+					Description: description,
+				}, true
+			}
+
+			for _, label := range a.Labels {
+				if strings.Contains(strings.ToLower(label), value) {
+					return UnifiedApp{
+						ID:          a.ID,
+						Description: description,
+					}, true
+				}
 			}
 		}
 

@@ -9,5 +9,5 @@ Use data from below to quickly find trash apps:
 
 ```sh
 # Find xiaomi related apps
-FIND=xiaomi go run .
+FIND=xiaomi+miui go run .
 ```
