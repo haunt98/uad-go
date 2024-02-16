@@ -13,25 +13,8 @@ import (
 	"github.com/samber/lo"
 )
 
-var (
-	//go:embed data/uad_lists.json
-	uadBytes []byte
-
-	//go:embed data/adl_aosp.json
-	adlAOSPBytes []byte
-
-	//go:embed data/adl_carrier.json
-	adlCarrierBytes []byte
-
-	//go:embed data/adl_google.json
-	adlGoogleBytes []byte
-
-	//go:embed data/adl_misc.json
-	adlMiscBytes []byte
-
-	//go:embed data/adl_oem.json
-	adlOEMBytes []byte
-)
+//go:embed data/uad_lists.json
+var uadBytes []byte
 
 func main() {
 	findStr := os.Getenv("FIND")
@@ -46,7 +29,6 @@ func main() {
 	// Stop if found
 	// Otherwise keep going
 	for _, findFn := range []func(string) []UnifiedApp{
-		handleADL,
 		handleUAD,
 	} {
 		apps = findFn(findStr)
@@ -100,72 +82,6 @@ func handleUAD(findStr string) []UnifiedApp {
 					Description: description,
 				}, true
 			}
-		}
-
-		return UnifiedApp{}, false
-	})
-
-	// Sort it
-	sort.Slice(apps, func(i, j int) bool {
-		return apps[i].ID < apps[j].ID
-	})
-
-	return apps
-}
-
-func handleADL(findStr string) []UnifiedApp {
-	adlApps := ADLApps{}
-	for _, bytes := range [][]byte{
-		adlAOSPBytes,
-		adlCarrierBytes,
-		adlGoogleBytes,
-		adlMiscBytes,
-		adlOEMBytes,
-	} {
-		adlSubApps := ADLApps{}
-		if err := json.Unmarshal(bytes, &adlSubApps); err != nil {
-			slog.Error("json: failed to unmarshal apps", err)
-			return nil
-		}
-
-		adlApps = append(adlApps, adlSubApps...)
-	}
-
-	apps := lo.FilterMap(adlApps, func(a ADLApp, i int) (UnifiedApp, bool) {
-		if a.Removal != ADLRemovalDelete {
-			return UnifiedApp{}, false
-		}
-
-		a.ID = strings.TrimSpace(a.ID)
-		description := strings.TrimSpace(a.Description) + " " + strings.TrimSpace(a.Warning)
-
-		// Find it
-		if strings.Contains(strings.ToLower(a.ID), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
-		}
-
-		if strings.Contains(strings.ToLower(a.Label), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
-		}
-
-		if strings.Contains(strings.ToLower(a.Description), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
-		}
-
-		if strings.Contains(strings.ToLower(a.Warning), findStr) {
-			return UnifiedApp{
-				ID:          a.ID,
-				Description: description,
-			}, true
 		}
 
 		return UnifiedApp{}, false
