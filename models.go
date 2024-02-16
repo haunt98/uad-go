@@ -1,6 +1,7 @@
 package main
 
 // https://github.com/0x192/universal-android-debloater/wiki/FAQ
+// https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/wiki/FAQ
 const UADRemovalRecommended = "Recommended"
 
 type UADApps []UADApp

@@ -44,4 +44,4 @@ clean:
 	rm -rf guad
 
 upstream:
-	curl https://raw.githubusercontent.com/0x192/universal-android-debloater/main/resources/assets/uad_lists.json --output data/uad_lists.json
+	curl https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/main/resources/assets/uad_lists.json --output data/uad_lists.json
