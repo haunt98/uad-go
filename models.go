@@ -4,10 +4,9 @@ package main
 // https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/wiki/FAQ
 const UADRemovalRecommended = "Recommended"
 
-type UADApps []UADApp
+type UADApps map[string]UADApp
 
 type UADApp struct {
-	ID           string   `json:"id,omitempty"`
 	List         string   `json:"list,omitempty"`
 	Description  string   `json:"description,omitempty"`
 	Removal      string   `json:"removal,omitempty"`
@@ -19,4 +18,5 @@ type UADApp struct {
 type UnifiedApp struct {
 	ID          string
 	Description string
+	Safe2Remove bool
 }

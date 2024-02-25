@@ -23,6 +23,9 @@ func main() {
 	}
 	findStr = strings.ToLower(strings.TrimSpace(findStr))
 
+	// Include not safe 2 remove
+	risk := strings.EqualFold(os.Getenv("RISK"), "true")
+
 	// For example xiaomi+miui
 	// Use + instead of | because | is unix pipe
 	values := strings.Split(findStr, "+")
@@ -35,70 +38,82 @@ func main() {
 	// Loop all data sources
 	// Stop if found
 	// Otherwise keep going
-	for _, findFn := range []func(...string) []UnifiedApp{
+	for _, findFn := range []func(bool, ...string) []UnifiedApp{
 		searchUAD,
 	} {
-		apps = findFn(values...)
+		apps = findFn(risk, values...)
 		if len(apps) != 0 {
 			break
 		}
 	}
 
 	for _, a := range apps {
-		color.Green("ID: %s", a.ID)
-		fmt.Printf("Description: %s\n", a.Description)
-
-		fmt.Println()
+		if a.Safe2Remove {
+			color.Green("ID: %s", a.ID)
+		} else {
+			color.Red("ID: %s", a.ID)
+		}
+		fmt.Printf("Description: %s\n\n", a.Description)
 	}
 }
 
-func searchUAD(values ...string) []UnifiedApp {
+func searchUAD(risk bool, values ...string) []UnifiedApp {
 	uadApps := UADApps{}
 	if err := json.Unmarshal(uadBytes, &uadApps); err != nil {
 		slog.Error("json: failed to unmarshal apps", err)
 		return nil
 	}
 
-	apps := lo.FilterMap(uadApps, func(a UADApp, i int) (UnifiedApp, bool) {
-		if a.Removal != UADRemovalRecommended {
-			return UnifiedApp{}, false
+	apps := make([]UnifiedApp, 0, len(uadApps))
+	for uadAppID, uadApp := range uadApps {
+		safe2Remove := uadApp.Removal == UADRemovalRecommended
+		if !risk && !safe2Remove {
+			continue
 		}
 
-		a.ID = strings.TrimSpace(a.ID)
-		description := strings.TrimSpace(a.Description)
+		uadAppID = strings.TrimSpace(uadAppID)
+		uadApp.Description = strings.TrimSpace(uadApp.Description)
 
-		// Find it
+		found := false
 		for _, value := range values {
-			if strings.Contains(strings.ToLower(a.ID), value) {
-				return UnifiedApp{
-					ID:          a.ID,
-					Description: description,
-				}, true
+			if strings.Contains(strings.ToLower(uadAppID), value) {
+				found = true
+				break
 			}
 
-			if strings.Contains(strings.ToLower(a.Description), value) {
-				return UnifiedApp{
-					ID:          a.ID,
-					Description: description,
-				}, true
+			if strings.Contains(strings.ToLower(uadApp.Description), value) {
+				found = true
+				break
 			}
 
-			for _, label := range a.Labels {
+			for _, label := range uadApp.Labels {
 				if strings.Contains(strings.ToLower(label), value) {
-					return UnifiedApp{
-						ID:          a.ID,
-						Description: description,
-					}, true
+					found = true
+					break
 				}
 			}
+
+			if found {
+				break
+			}
 		}
 
-		return UnifiedApp{}, false
-	})
+		if found {
+			apps = append(apps, UnifiedApp{
+				ID:          uadAppID,
+				Description: uadApp.Description,
+				Safe2Remove: safe2Remove,
+			})
+		}
+	}
 
-	// Sort it
+	// Sort it by safe 2 remove first, then by ID
 	sort.Slice(apps, func(i, j int) bool {
-		return apps[i].ID < apps[j].ID
+		if apps[i].Safe2Remove == apps[j].Safe2Remove {
+			return apps[i].ID < apps[j].ID
+		}
+
+		return apps[i].Safe2Remove
 	})
 
 	return apps
