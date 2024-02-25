@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## v0.0.7 (2024-02-26)
+
+### Added
+
+- feat: migrate to latest uad_list.json format (2024-02-26)
+
+### Others
+
+- chore: sync upstream (2024-02-26)
+
+- chore(deps): bump github.com/samber/lo from 1.38.1 to 1.39.0 (#4) (2024-02-16)
+
+- chore(changelog): generate v0.0.6 (2024-02-16)
+
 ## v0.0.6 (2024-02-16)
 
 ### Added
