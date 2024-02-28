@@ -425,7 +425,7 @@
   },
   "com.sonymobile.music.googlelyricsplugin": {
     "list": "Oem",
-    "description": "Google lyrics plugin\nProvides lycris from Google in the sony music app\n",
+    "description": "Google lyrics plugin\nProvides lyrics from Google in the sony music app\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -457,7 +457,7 @@
   },
   "com.sonymobile.pip": {
     "list": "Oem",
-    "description": "Sony pip (Picture in Picture)\nAllows videos to shrink down to a small resizable window.\nOnly useful bere Android Oreo which provide native support for Pip ?\nhttps://developer.android.com/guide/topics/ui/picture-in-picture\nhttps://support.sonymobile.com/global-en/xperiaxz1compact/faq/apps-&-settings/8019307455ff6184015e92f63324005926/\n",
+    "description": "Sony's PiP (Picture in Picture)\nAllows videos to shrink down to a small resizable window.\nOnly useful on Android Oreo versions which provide native support for Pip ?\nhttps://developer.android.com/guide/topics/ui/picture-in-picture\nhttps://support.sonymobile.com/global-en/xperiaxz1compact/faq/apps-&-settings/8019307455ff6184015e92f63324005926/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -545,7 +545,7 @@
   },
   "com.sonymobile.xperiaxlivewallpaper.product.res.overlay": {
     "list": "Oem",
-    "description": "Some overlay for a live wallaper from Sony? Overlays are usually themes, but not sure about this one as theming seems weird for live wallpapers. Could be that Sony automatically generates theme packages for all or most system apps, which might generate some unnecessary packages.",
+    "description": "Some overlay for a live wallpaper from Sony? Overlays are usually themes, but not sure about this one as theming seems weird for live wallpapers. Could be that Sony automatically generates theme packages for all or most system apps, which might generate some unnecessary packages.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -719,7 +719,7 @@
   },
   "com.ape.gamemode": {
     "list": "Oem",
-    "description": "Provides game mode feature for Wiko mobilee",
+    "description": "Provides game mode feature for Wiko mobile",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1081,7 +1081,7 @@
   },
   "com.asurion.android.verizon.vms": {
     "list": "Carrier",
-    "description": "Verizon Digital Secure (https://play.google.com/store/apps/details?id=com.asurion.android.verizon.vms)\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "description": "Verizon Digital Secure (https://play.google.com/store/apps/details?id=com.asurion.android.verizon.vms)\nNote : This app is developed by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1137,7 +1137,7 @@
   },
   "com.LogiaGroup.LogiaDeck": {
     "list": "Carrier",
-    "description": "Mobile Services Manager\nSeems to be a spyware. \nGood explainantion from someone who worked for carrier : \nhttps://www.reddit.com/r/lgv20/comments/6u0wnf/what_is_mobile_services_manager_did_i_catch_a/\n",
+    "description": "Mobile Services Manager\nSeems to be a spyware. \nGood explanation from someone who worked for carrier : \nhttps://www.reddit.com/r/lgv20/comments/6u0wnf/what_is_mobile_services_manager_did_i_catch_a/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1377,7 +1377,7 @@
   },
   "com.asurion.home.sprint.vpl": {
     "list": "Carrier",
-    "description": "Tech Expert (for VPL devices/employees) ?\nNow \"Sprint Complete\" (see below).\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "description": "Tech Expert (for VPL devices/employees) ?\nNow \"Sprint Complete\" (see below).\nNote : This app is developed by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1593,7 +1593,7 @@
   },
   "com.asurion.android.mobilerecovery.att": {
     "list": "Carrier",
-    "description": "AT&T Protect Plus (discontinued. Replaced by AT&T ProTech : com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support expert\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "description": "AT&T Protect Plus (discontinued. Replaced by AT&T ProTech : com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support expert\nNote : This app is developed by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1601,7 +1601,7 @@
   },
   "com.asurion.android.protech.att": {
     "list": "Carrier",
-    "description": "AT&T ProTech (https://play.google.com/store/apps/details?id=com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support \"expert\".\nNote : This app is developped by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
+    "description": "AT&T ProTech (https://play.google.com/store/apps/details?id=com.asurion.android.protech.att)\nHelp and support app. Lets you call or chat with a live U.S.-based AT&T ProTech support \"expert\".\nNote : This app is developed by Asurion, a US company whose business is to sell insurances.\nAll US carriers use Asurion for the phone insurances.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1609,7 +1609,7 @@
   },
   "com.att.android.attsmartwifi": {
     "list": "Carrier",
-    "description": "AT&T Smart Wi-Fi (https://play.google.com/store/apps/details?id=com.att.android.attsmartwifi)\nFinds and auto-connects to available hotspots to minimize cellular data consumption.\nAuto-connects is not a godd idea.\nWorth reading : \nhttps://www.europol.europa.eu/activities-services/public-awareness-and-prevention-guides/risks-of-using-public-wi-fi\nhttps://www.eff.org/deeplinks/2020/01/why-public-wi-fi-lot-safer-you-think\nYou are ok if you go on HTTPS websites.\nUse a VPN if you want to hide the domain names you visit, avoid usage restriction (no P2P, blacklisted websites...) and encrypt HTTP traffic.\n==> https://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n",
+    "description": "AT&T Smart Wi-Fi (https://play.google.com/store/apps/details?id=com.att.android.attsmartwifi)\nFinds and auto-connects to available hotspots to minimize cellular data consumption.\nAuto-connects is not a good idea.\nWorth reading : \nhttps://www.europol.europa.eu/activities-services/public-awareness-and-prevention-guides/risks-of-using-public-wi-fi\nhttps://www.eff.org/deeplinks/2020/01/why-public-wi-fi-lot-safer-you-think\nYou are ok if you go on HTTPS websites.\nUse a VPN if you want to hide the domain names you visit, avoid usage restriction (no P2P, blacklisted websites...) and encrypt HTTP traffic.\n==> https://thatoneprivacysite.net/choosing-the-best-vpn-for-you/\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1641,7 +1641,7 @@
   },
   "com.att.dtv.shaderemote": {
     "list": "Carrier",
-    "description": "DIRECTV Remote App (https://play.google.com/store/apps/details?id=com.att.dtv.shaderemote)\nLets you control DIRECTV HD receivers in your home that are connected to Internet, from your phone.\nFYI : DIRECTV is a susbsidiary of AT&T \nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
+    "description": "DIRECTV Remote App (https://play.google.com/store/apps/details?id=com.att.dtv.shaderemote)\nLets you control DIRECTV HD receivers in your home that are connected to Internet, from your phone.\nFYI : DIRECTV is a subsidiary of AT&T \nWorth reading : https://en.wikipedia.org/wiki/DirecTV#Consumer_protection_lawsuits_and_violations\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2105,7 +2105,7 @@
   },
   "com.huawei.android.instantonline": {
     "list": "Oem",
-    "description": "no noticable consequences\n",
+    "description": "no noticeable consequences\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2289,7 +2289,7 @@
   },
   "com.huawei.fido.uafclient": {
     "list": "Oem",
-    "description": "UAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentification to access online servics.",
+    "description": "UAF client for FIDO.\nFido is a set of open technical specifications for mechanisms of authenticating users to online services that do not depend on passwords.\nhttps://fidoalliance.org/specs/u2f-specs-1.0-bt-nfc-id-amendment/fido-glossary.html\nhttps://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-overview-v2.0-rd-20170927.html\nThe UAF protocol is designed to enable online services to offer passwordless and multi-factor security by allowing users to register their device to the online service and using a local authentication mechanism such as iris or fingerprint recognition.\nhttps://developers.google.com/identity/fido/android/native-apps\nSafe to remove if you don't use password-less authentication to access online services.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2329,7 +2329,7 @@
   },
   "com.huawei.hwsearch": {
     "list": "Oem",
-    "description": "Petal Search widget. Used for finding apps/apks on serveral online sources (introduced after Google Mobile Services Ban).\n",
+    "description": "Petal Search widget. Used for finding apps/apks on several online sources (introduced after Google Mobile Services Ban).\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2363,7 +2363,7 @@
   },
   "com.huawei.hiai": {
     "list": "Oem",
-    "description": "no noticable consequences\n",
+    "description": "no noticeable consequences\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2379,7 +2379,7 @@
   },
   "com.huawei.hicard": {
     "list": "Oem",
-    "description": "Huawei Cards, no noticable consequences\n",
+    "description": "Huawei Cards, no noticeable consequences\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2443,7 +2443,7 @@
   },
   "com.huawei.hwasm": {
     "list": "Oem",
-    "description": "FIDO UAF Autenthicator-Specific Module.\nSee 'com.huawei.fido.uafclient' for FIDO explaination.\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients to detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nhttps://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html",
+    "description": "FIDO UAF Authenticator-Specific Module.\nSee 'com.huawei.fido.uafclient' for FIDO explaination.\nThe UAF Authenticator-Specific Module (ASM) is a software interface on top of UAF authenticators which gives a standardized way for FIDO UAF clients to detect and access the functionality of UAF authenticators and hides internal communication complexity from FIDO UAF Client.\nhttps://fidoalliance.org/specs/fido-uaf-v1.0-ps-20141208/fido-uaf-asm-api-v1.0-ps-20141208.html",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2451,7 +2451,7 @@
   },
   "com.huawei.hwblockchain": {
     "list": "Oem",
-    "description": "Probably blockchain related, no noticable consequences when removed\n",
+    "description": "Probably blockchain related, no noticeable consequences when removed\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2519,7 +2519,7 @@
   },
   "com.huawei.ohos.inputmethod": {
     "list": "Oem",
-    "description": "Huawei default Keyboard\nWARNING: Before unistalling, make sure to have a third-party keyboard installed.\n",
+    "description": "Huawei default Keyboard\nWARNING: Before uninstalling, make sure to have a third-party keyboard installed.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3695,7 +3695,7 @@
   },
   "com.samsung.android.app.dressroom": {
     "list": "Oem",
-    "description": "Samsung Wallpapers\nWallaper manager. Needed to pick up a wallpaper on Android 10+.\nHas INTERNET permission and ACCESS_MEDIA_LOCATION\nBefore Android 10, you should still be able to set a wallpaper from the Samsung gallery without this package.\nWARNING: Removing this app will prevent you to set a new wallpaper on Android 10+ (even from the Gallery) or changing the Material You palette on Android 12+.",
+    "description": "Samsung Wallpapers\nWallpaper manager. Needed to pick up a wallpaper on Android 10+.\nHas INTERNET permission and ACCESS_MEDIA_LOCATION\nBefore Android 10, you should still be able to set a wallpaper from the Samsung gallery without this package.\nWARNING: Removing this app will prevent you to set a new wallpaper on Android 10+ (even from the Gallery) or changing the Material You palette on Android 12+.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -3927,7 +3927,7 @@
   },
   "com.samsung.android.ardrawing": {
     "list": "Oem",
-    "description": "AR Doodles (accessible through AR Zone)\nLets you draw on your face using the front camera and uses AR Core for drawing on the environment with the rear camera.\nOnly Sasmung AR app (afaik) that requests location access, and it refuses to run without it\n",
+    "description": "AR Doodles (accessible through AR Zone)\nLets you draw on your face using the front camera and uses AR Core for drawing on the environment with the rear camera.\nOnly Samsung AR app (afaik) that requests location access, and it refuses to run without it\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4263,7 +4263,7 @@
   },
   "com.samsung.android.location": {
     "list": "Oem",
-    "description": "IMO it handles GPS needs for some samsungs apps. I have it removed on my phone and I still can use the GPS with a 3-party app.\n",
+    "description": "IMO it handles GPS needs for some Samsung apps. I have it removed on my phone and I still can use the GPS with a 3-party app.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4798,7 +4798,7 @@
   },
   "com.samsung.cmfa.AuthTouch": {
     "list": "Oem",
-    "description": "Continous Multi-Factor Authentication AuthTouchService\nRelated to `com.samsung.android.cmfa.framework`.",
+    "description": "Continuous Multi-Factor Authentication AuthTouchService\nRelated to `com.samsung.android.cmfa.framework`.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -4930,7 +4930,7 @@
   },
   "com.samsung.knox.keychain": {
     "list": "Oem",
-    "description": "Knox Key Chain\nAllows apps to sign data using system-wide private key/certificate pairs. \nSo, even though the Android Keystore provides per-app access to credentials, the Android KeyChain runs as a system user, \nand hence, credentials stored through the Android KeyChain are associated with the system ID instead of a user ID.\nhttps://docs.samsungknox.com/dev/knox-sdk/about-keystores.htm\nThis is only useful for apps using the TIMA Keystore. The big question I'm trying to anwser is:\nWhich are using this except Samsung apps? Can an android dev help on this?\n",
+    "description": "Knox Key Chain\nAllows apps to sign data using system-wide private key/certificate pairs. \nSo, even though the Android Keystore provides per-app access to credentials, the Android KeyChain runs as a system user, \nand hence, credentials stored through the Android KeyChain are associated with the system ID instead of a user ID.\nhttps://docs.samsungknox.com/dev/knox-sdk/about-keystores.htm\nThis is only useful for apps using the TIMA Keystore. The big question I'm trying to answer is:\nWhich are using this except Samsung apps? Can an android dev help on this?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
