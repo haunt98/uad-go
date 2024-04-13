@@ -1297,7 +1297,7 @@
   },
   "com.vzw.hss.myverizon": {
     "list": "Carrier",
-    "description": "Verizon Call Filter (https://play.google.com/store/apps/details?id=com.vzw.ecid)\nNOTE : Never trust a company which promotes call ID/spam blocking features.\n \nMy Verizon (https://play.google.com/store/apps/details?id=com.vzw.hss.myverizon)\n",
+    "description": "MyVerizon app",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -1857,7 +1857,7 @@
   },
   "fr.bouyguestelecom.vvmandroid": {
     "list": "Carrier",
-    "description": "",
+    "description": "This app wants to inject ads into your gallery.\nFound only ads and crashlytics components.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -2017,7 +2017,7 @@
   },
   "com.android.keyguard": {
     "list": "Oem",
-    "description": "I NEVER HAD AN HUAWEI DEVICE ON HAND. THIS LIST WAS MADE POSSIBLE BY @REDSKULL23\nhttps://forum.xda-developers.com/honor-6x/how-to/guide-list-bloat-software-emui-safe-to-t3700814\nAdditional informaton were taken from https://forum.xda-developers.com/huawei-p40-pro/how-to/adb-debloating-t4088633\nYet, those documentations are not precise enough. If you have additional information, please contribute to this list\nI use [MORE INFO NEEDED] tag as a marker.\nIf you have EMUI 10 or older, check the AOSP file, as Huawei uses AOSP package name for their own app.\n\nHUAWEI magazine unlock (The package name is really confusing)\nIt's a proprietary app based on the AOSP package called com.android.keyguard. That's not clever at all.\nhttps://consumer.huawei.com/en/support/content/en-us00206571/\nLets you customize your lock screen wallpapers\n",
+    "description": "\nHuawei magazine unlock\nIt's a proprietary app based on the AOSP package called com.android.keyguard. That's not clever at all.\nhttps://consumer.huawei.com/en/support/content/en-us00206571/\nLets you customize your lock screen wallpapers\nhttps://forum.xda-developers.com/honor-6x/how-to/guide-list-bloat-software-emui-safe-to-t3700814\nAdditional information were taken from https://forum.xda-developers.com/huawei-p40-pro/how-to/adb-debloating-t4088633\nIf you have EMUI 10 or older, check the AOSP file, as Huawei uses AOSP package name for their own app. WARNING: breaks home and recents button on Xiaomi Mi Pad:\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/330",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5564,7 +5564,7 @@
   },
   "com.sec.android.preloadinstaller": {
     "list": "Oem",
-    "description": "Very shady apk. According to if you're chinese or not, Samsung mount an hidden partition during the first boot and install some apps.\nhttps://nitter.net/fs0c131y/status/1046689524691218432#m\nArchive : https://web.archive.org/web/20200107110205/https://nitter.net/fs0c131y/status/1046689524691218432\n",
+    "description": "Very shady apk. According to if you're chinese or not, Samsung mount an hidden partition during the first boot and install some apps.\nhttps://web.archive.org/web/20200107110205/https://nitter.net/fs0c131y/status/1046689524691218432\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5796,7 +5796,7 @@
   },
   "com.sec.imslogger": {
     "list": "Oem",
-    "description": "IMS Logger provides logging opt-ins.\nSecurity flaw: https://nitter.net/fs0c131y/status/1115889065285562368",
+    "description": "IMS Logger provides logging opt-ins.\nSecurity flaw: https://web.archive.org/web/20211209093408/https://twitter.com/fs0c131y/status/1115889065285562368",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5890,6 +5890,14 @@
     "labels": [],
     "removal": "Recommended"
   },
+  "com.sec.knox.switcher": {
+    "list": "Oem",
+    "description": "Knox Secure Folder",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
   "com.sec.location.nsflp2": {
     "list": "Oem",
     "description": "Samsung Location SDK\nI just know this doesn't have any impact on GPS stuff. \nIt seems to be only used along Samsung apps.\n",
@@ -5952,7 +5960,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.sec.yosemite.phone": {
     "list": "Oem",
@@ -6024,7 +6032,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.policydm": {
     "list": "Oem",
@@ -7972,7 +7980,7 @@
   },
   "com.oem.oemlogkit": {
     "list": "Oem",
-    "description": "OnePlus LogKit\nShady logging app that system apps can use to log WiFi traffic, Bluetooth traffic, NFC activity, GPS coordinates over time, power consumption, modem signal/data details, \"lag issues,\" and more.\nhttps://thehackernews.com/2017/11/oneplus-logkit-app.html\nhttps://www.bleepingcomputer.com/news/security/second-oneplus-factory-app-discovered-this-one-dumps-photos-wifi-and-gps-logs/\nhttps://nitter.net/fs0c131y/status/930773795656396801",
+    "description": "OnePlus LogKit\nShady logging app that system apps can use to log WiFi traffic, Bluetooth traffic, NFC activity, GPS coordinates over time, power consumption, modem signal/data details, \"lag issues,\" and more.\nhttps://thehackernews.com/2017/11/oneplus-logkit-app.html\nhttps://www.bleepingcomputer.com/news/security/second-oneplus-factory-app-discovered-this-one-dumps-photos-wifi-and-gps-logs/\nhttps://web.archive.org/web/20210611122551/https://twitter.com/fs0c131y/status/930773795656396801",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8044,7 +8052,7 @@
   },
   "com.oneplus.factorymode": {
     "list": "Oem",
-    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to access the hidden menu.\nPotential security risk: https://nitter.net/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK pre-installed.\nFor now, this only works in ADB, which requires local access to the device.",
+    "description": "FactoryMode\nUsed in the factory to test devices.\nType *#808# in the OnePlus dialer to access the hidden menu.\nPotential security risk: https://web.archive.org/web/20211103134620/https://twitter.com/fs0c131y/status/930115188988182531\nIt's possible for an app to enable root access on any device with the APK pre-installed.\nFor now, this only works in ADB, which requires local access to the device.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8078,7 +8086,7 @@
   },
   "com.oneplus.opbugreportlite": {
     "list": "Oem",
-    "description": "OPBugReportLite\nRuns in the background. Runs as part of the system, even if disabled? Disabling does remove all RAM usage tho, and hopefully removes access to user data, as disable/uninstall should sever the connection to the Android user account.\nSilently sends, every 6 hours, battery stats, kernel panics, watchdogs, ANRs and all crashes of your device to Singapore.\nhttps://www.androidpit.com/oneplus-opbugreportlite-data-collection\nSource (yeah it's Elliot Alderson again :D): https://nitter.net/fs0c131y/status/933037531066785797",
+    "description": "OPBugReportLite\nRuns in the background. Runs as part of the system, even if disabled? Disabling does remove all RAM usage tho, and hopefully removes access to user data, as disable/uninstall should sever the connection to the Android user account.\nSilently sends, every 6 hours, battery stats, kernel panics, watchdogs, ANRs and all crashes of your device to Singapore.\nhttps://www.androidpit.com/oneplus-opbugreportlite-data-collection\nSource (yeah it's Elliot Alderson again :D): https://web.archive.org/web/20220520051328/https://twitter.com/fs0c131y/status/933037531066785797",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8374,11 +8382,11 @@
   },
   "com.mediatek.gba": {
     "list": "Misc",
-    "description": "",
+    "description": "Generic Bootstrapping Architecture.\nHas ims, X-TMUS-IMEI, bsf.msg.lab.t-mobile.com things to encrypted calls ims probably\n(thinking by looking at the classes.dex code). Connects to site bsf.ims.mncXXX.pub.3gppnetwork.org.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.adups.fota.sysoper": {
     "list": "Misc",
@@ -8406,11 +8414,11 @@
   },
   "com.mediatek.camera": {
     "list": "Misc",
-    "description": "",
+    "description": "Stock Camera app on some Mediatek phones.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.android.protips": {
     "list": "Aosp",
@@ -8430,11 +8438,11 @@
   },
   "com.mediatek.mms.appservice": {
     "list": "Misc",
-    "description": "",
+    "description": "Provides Voice message, Video message, Fax message, Text message in a messaging app?",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.adups.fota": {
     "list": "Misc",
@@ -8446,7 +8454,7 @@
   },
   "com.st.nfc.dta.mobile": {
     "list": "Oem",
-    "description": "",
+    "description": "STNFCDta\nUnknown checking app (NFC UID gen mode, NFC CDL value, CR version, Extended RF frame size, T4AT priority over P2P).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8470,11 +8478,11 @@
   },
   "com.wtk.factory": {
     "list": "Oem",
-    "description": "",
+    "description": "FactoryMode\nHardware testing things.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.mediatek.batterywarning": {
     "list": "Misc",
@@ -8486,11 +8494,11 @@
   },
   "com.wtk.stresstest": {
     "list": "Oem",
-    "description": "",
+    "description": "StressTest\nTesting Hardware things.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.android.dialer": {
     "list": "Aosp",
@@ -8542,7 +8550,7 @@
   },
   "com.mediatek.location.mtknlp": {
     "list": "Misc",
-    "description": "",
+    "description": "Mtk Nlp\nNetwork Location Provider? This app has location permissions and no code.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -8834,19 +8842,19 @@
   },
   "com.example.rftuner": {
     "list": "Oem",
-    "description": "",
+    "description": "Secret Code: 439. FTM/Custom Test, SAR test mode, OTA Test, ANT Switch/Select.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.gsma.rcs": {
-    "list": "Aosp",
-    "description": "",
+    "list": "Carrier",
+    "description": "RCS\nHidden RCS Messaging? or only Frameworks?\nFeature code:184501\nCarrier name: GSM Association.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.oem.rftoolkit": {
     "list": "Misc",
@@ -8946,7 +8954,7 @@
   },
   "com.oneplus.asti": {
     "list": "Oem",
-    "description": "",
+    "description": "OPAI\nApp Prediction Service, SarahService, bindsarah\nIts code is too difficult to understand, but it looks like AI training.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9050,11 +9058,11 @@
   },
   "com.oneplus.contacts": {
     "list": "Oem",
-    "description": "",
+    "description": "Oneplus Contacts",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.oneplus.contacts.basiccolorblack.overlay": {
     "list": "Oem",
@@ -9062,7 +9070,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.oneplus.contacts.basiccolorwhite.overlay": {
     "list": "Oem",
@@ -9070,7 +9078,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.oneplus.coreservice": {
     "list": "Oem",
@@ -9362,7 +9370,7 @@
   },
   "com.oneplus.screenshot": {
     "list": "Oem",
-    "description": "",
+    "description": "Needed for Power + Volume Down screenshot.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9370,7 +9378,7 @@
   },
   "com.oneplus.sdcardservice": {
     "list": "Oem",
-    "description": "",
+    "description": "Needed for sdcard?",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9570,11 +9578,11 @@
   },
   "com.qualcomm.qti.qtisettings": {
     "list": "Misc",
-    "description": "",
+    "description": "In code found getting info about device Ram Size, Rom Size, get Wifi Mac Address, is Settings Task Done.\nAlso in app found qtisystemservice code.\nIt looks like the app is for developers only, so it may be removed.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.qualcomm.qtil.aptxals": {
     "list": "Misc",
@@ -9642,11 +9650,11 @@
   },
   "com.recognize.number": {
     "list": "Oem",
-    "description": "",
+    "description": "Identify unknown numbers\nChecking the code, this app looks useful only in China.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.roaming.android.gsimbase": {
     "list": "Misc",
@@ -9886,11 +9894,11 @@
   },
   "com.google.android.connectivity.resources": {
     "list": "Aosp",
-    "description": "",
+    "description": "Network connectivity resources.\nRemoving this packages causes a bootloop.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Unsafe"
   },
   "com.google.android.networkstack.tethering": {
     "list": "Aosp",
@@ -10438,7 +10446,7 @@
   },
   "com.samsung.android.camerasdkservice": {
     "list": "Oem",
-    "description": "",
+    "description": "SCameraService\nCamera SDK, probably used for the main camera app?\nThere are a lot of features that I do not know if it is not only available to developers.\nApp has many permissions like arcsoft, smartcamerascan, supernight, too many to write here.\nA strange app with many things sometimes mentioned in the code that it is used for calibration.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10446,7 +10454,7 @@
   },
   "com.samsung.android.providers.carrier": {
     "list": "Oem",
-    "description": "\n",
+    "description": "App for install update to get latest features for your SIM card.\nIt is hard to say how useful this app is.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -10502,11 +10510,11 @@
   },
   "com.samsung.sait.sohservice": {
     "list": "Oem",
-    "description": "",
+    "description": "FactoryApp to test battery things such as set voltage, Soc, temperature, status, timestamp.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.samsung.vklayer.sm8250": {
     "list": "Oem",
@@ -10518,11 +10526,11 @@
   },
   "com.samsung.android.app.telephonyui": {
     "list": "Oem",
-    "description": "",
+    "description": "It's calling app from samsung China, Korea.\nI don't know how important this app is.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.samsung.android.appseparation": {
     "list": "Oem",
@@ -10534,11 +10542,11 @@
   },
   "com.samsung.android.callbgprovider": {
     "list": "Oem",
-    "description": "",
+    "description": "CallBGProvider\nCall Background.\nIt is customizing background theme of calling.\nSCloud, backup things found in code.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.samsung.android.dialer": {
     "list": "Oem",
@@ -10838,11 +10846,11 @@
   },
   "com.hmdglobal.enterprise.api": {
     "list": "Oem",
-    "description": "",
+    "description": "I can't find this app on the internet, but I heard it has telemetry.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.android.gallery3d.refocus": {
     "list": "Oem",
@@ -10946,7 +10954,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Advanced"
   },
   "com.tcl.fota.system.a_overlay": {
     "list": "Oem",
@@ -12890,11 +12898,11 @@
   },
   "com.qti.qualcomm.datastatusnotification": {
     "list": "Misc",
-    "description": "Sends you a message when you reach a specified data limit?\nContains a service, but I've never it run. But I've also never run out of data or used the Android data warning system.\nhttps://www.qualcomm.com/news/onq/2016/05/02/qualcomm-trupalette-brings-your-phones-display-life",
+    "description": "Sends you a message when you reach a specified data limit?\nContains a service, but I've never it run. But I've also never run out of data or used the Android data warning system. WARNING: on HyperOS, disabling this package results in the mobile networks section to break as well as SIMs showing no service.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   "com.qti.confuridialer": {
     "list": "Misc",
@@ -13114,11 +13122,11 @@
   },
   "com.qualcomm.qtil.btdsda": {
     "list": "Misc",
-    "description": "Hidden bluetooth: answering call, hanging up call, hanging up conference call.\nIf you have dual-sim then you will lose these things?",
+    "description": "Hidden bluetooth: answering call, hanging up call, hanging up conference call.\nIf you have dual-sim then you will lose these things? NOTE: disabling this causes audio to come from earpiece regardless of the option selected (Speaker, Earpiece, Bluetooth)",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.qualcomm.uimremoteserver": {
     "list": "Misc",
@@ -13746,7 +13754,7 @@
   },
   "com.crowdcare.agent.k": {
     "list": "Misc",
-    "description": "Crowdcare is now Wysdom.AI (https://nitter.42l.fr/wysdomai)\nFrom their Twitter description : The easiest way for businesses to improve customer satisfaction, contain costs, \nand generate revenue by using #AI to power customer experiences.\nWysdom.AI has joined the Microsoft Partner Network in 2018\nhttps://wysdom.ai/privacy-policy/ (not good)\n",
+    "description": "Crowdcare is now Wysdom.AI\nFrom their Twitter description: the easiest way for businesses to improve customer satisfaction, contain costs, \nand generate revenue by using #AI to power customer experiences.\nWysdom.AI has joined the Microsoft Partner Network in 2018\nhttps://wysdom.ai/privacy-policy/ (not good)\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15090,7 +15098,7 @@
   },
   "com.miui.cit": {
     "list": "Oem",
-    "description": "Hardware tests\nSecret codes (https://nitter.net/fs0c131y/status/933353182956326913#m) lets you run hardware tests.\nhttps://c.mi.com/thread-1744085-1-0.html\n",
+    "description": "Hardware tests\nSecret codes (https://web.archive.org/web/20220520051328/https://twitter.com/fs0c131y/status/933037531066785797). Lets you run hardware tests.\nhttps://c.mi.com/thread-1744085-1-0.html\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -15322,7 +15330,7 @@
   },
   "com.miui.daemon": {
     "list": "Oem",
-    "description": "MIUI daemon\nCollects a lot of data and sends them to China.\nSee : https://nitter.net/fs0c131y/status/938872347087564800?lang=en\n",
+    "description": "MIUI daemon\nCollects a lot of data and sends them to China.\nSee: https://web.archive.org/web/20210923050136/https://twitter.com/fs0c131y/status/938872347087564800",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -25862,7 +25870,7 @@
   },
   "com.oplus.melody": {
     "description": "Wireless Earphones\nWireless headset advanced configuration related (after uninstallation some Bluetooth headset setting options will be missing items, if you do not have headset setting problems, it is recommended to uninstall)\nhttps://play.google.com/store/apps/details?id=com.oplus.melody",
-    "removal": "Recommended",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -28019,7 +28027,7 @@
   },
   "com.evenwell.autoregistration": {
     "list": "Oem",
-    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://nitter.net/drwetter/status/1108801189662130176",
+    "description": "Spyware app which sends warranty details to China\nhttps://milankragujevic.com/the-trade-of-privacy-for-convenience\nhttps://archive.is/https://nitter.privacydev.net/drwetter/status/1108801189662130176",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -29409,11 +29417,11 @@
   },
   "com.android.phone": {
     "list": "Aosp",
-    "description": "AOSP Dialer",
+    "description": "AOSP Dialer\nRemoving this package breaks the software update/download and install screen on Samsung",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.t2m.euiccoverlay": {
     "list": "Oem",
@@ -36252,5 +36260,613 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  "com.heytap.headset": {
+    "list": "Oem",
+    "description": "HeyTap Melody App used to manage Oppo Bluetooth Earphones.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.activation": {
+    "list": "Oem",
+    "description": "Activation phone in china.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.mtp": {
+    "list": "Oem",
+    "description": "MTP application\nIt doesn't cause a bootloop, but its highly not recommended to remove it.\nThis app is needed for transfer files to PC/Phone.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.attribution": {
+    "list": "Oem",
+    "description": "Attribution\nApp for auto updates I don't know what.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.android.bixbyhelper": {
+    "list": "Oem",
+    "description": "QQ music plugin\nRequire QQ Music and it's Chinese.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.bixbytouch": {
+    "list": "Oem",
+    "description": "Bixby Touch\nApp for smart things, still only for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.incall.contentprovider": {
+    "list": "Oem",
+    "description": "CallContentProvider\nAfter remove, some features will not be available:\nFace AR, AR Emoji, filter, sticker.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.carlink": {
+    "list": "Oem",
+    "description": "CarLife app only for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.imagepp": {
+    "list": "Oem",
+    "description": "Chat PP\nOnly for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.firewall": {
+    "list": "Oem",
+    "description": "Blocked calls'msgs\nChinese blocking calls and spam.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.hidden.china": {
+    "list": "Oem",
+    "description": "China Hidden Menu\nLast call, secret code: 319712358.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.unionpay.tsmservice": {
+    "list": "Oem",
+    "description": "UnionPay\nOnly for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.chnfileshare.kit": {
+    "list": "Oem",
+    "description": "S Share\nChinese app to Secure transfer files using bluetooth.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.clocationservice": {
+    "list": "Oem",
+    "description": "CLocationService\nNetwork location provider only to Chinese.\nBad privacy.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.qualcomm.qti.gpudrivers.kalama.api33": {
+    "list": "Misc",
+    "description": "Adreno Graphics Drivers",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.sec.android.dexsystemui": {
+    "list": "Oem",
+    "description": "Samsung DeX System UI\nSafe to remove if not use connect phone for example to TV.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.deviceidservice": {
+    "list": "Oem",
+    "description": "DeviceIdService\nCollects device id but it is not known what it is used for.\nTake's OAID, VAID, AAID.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.chn.apps.devicemanagement": {
+    "list": "Oem",
+    "description": "AutoLoginService\nRegister device with China Telecom. Only for China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.dkey": {
+    "list": "Oem",
+    "description": "Samsung Wallet Digital Key\nUsed for cars, only China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.baidu.location.fused": {
+    "list": "Oem",
+    "description": "FusedLocation\nChinese baidu location.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.widget.pictureframe": {
+    "list": "Oem",
+    "description": "Gallery\nHas something like restore image.\nIt's not gallery app but provides some features to this app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.gamedriver.sm8550": {
+    "list": "Oem",
+    "description": "Samsung SM8550 GameDriver.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.globalpostprocmgr": {
+    "list": "Oem",
+    "description": "GlobalPostProcMgr\nUnknown app, has Draft Recovery.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.hongbaoassistant": {
+    "list": "Oem",
+    "description": "Hongbao Assistant\nChinese app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.iaft": {
+    "list": "Oem",
+    "description": "iaft\nHas permission dump, trace errors probably.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.kmxservice": {
+    "list": "Oem",
+    "description": "KmxService\nKnox Matrix. Provides a feature to securely generate and store keys used for end-to-end encryption (E2EE).\nIt encrypts/decrypts data on the user’s device and transmits it to the server.\nThe user’s original data cannot be checked as decryption is impossible from the server, which only has encrypted data, and is safely protected from external attacks.\nhttps://www.apkmirror.com/apk/samsung-electronics-co-ltd/kmxservice/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.app.kfa": {
+    "list": "Oem",
+    "description": "KFA\nAnother app from knox, has something to decrypt.\nName apk this app is: KnoxAIFrameworkApp.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.knox.mpos": {
+    "list": "Oem",
+    "description": "Knox mPOS Enabler offers a range of security/usability features, enabling secure and contactless payments on Samsung devices.\nhttps://play.google.com/store/apps/details?id=com.samsung.android.knox.mpos",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.knox.app.networkfilter": {
+    "list": "Oem",
+    "description": "knoxNwFilter\nOnly has frameworks to proxy server connection.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.knox.zt.framework": {
+    "list": "Oem",
+    "description": "KnoxZT Framework\nTo learn how you type, Touch Dynamics\nwill collect and analyze sensor data while typing.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.llmpolicy": {
+    "list": "Oem",
+    "description": "LLMPolicyService\nLow latency network to game? Looks unused.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.mocca": {
+    "list": "Oem",
+    "description": "MoccaMobile\nRequire google play services.\nDiagnostics, logs, car crash, better remove this app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.internal.systemui.navbar.gestural_no_hint": {
+    "list": "Oem",
+    "description": "Gestural Navigation Bar",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.internal.systemui.navbar.sec_gestural_no_hint": {
+    "list": "Oem",
+    "description": "Gestural Navigation Bar",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.internal.systemui.navbar.sec_gestural": {
+    "list": "Oem",
+    "description": "Gestural Navigation Bar",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.android.packageinstaller": {
+    "list": "Oem",
+    "description": "Removing it is Unsafe if there is no alternative.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.android.peripheral.framework": {
+    "list": "Oem",
+    "description": "Peripheral Framework\nIt's knox analytics.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.photoremasterservice": {
+    "list": "Oem",
+    "description": "Photo remaster will not work after remove, if this feature exist, still unknown.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.preloadapp": {
+    "list": "Oem",
+    "description": "Install app\nInstalls recommended apps.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.rampart": {
+    "list": "Oem",
+    "description": "Auto Blocker\nUses for blocking unknown apps install, commands.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.wifi.wapi.resources": {
+    "list": "Oem",
+    "description": "Needed for WiFi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.carkey": {
+    "list": "Oem",
+    "description": "Digital Key Framework\nFrameworks to CarKey app, only China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.gallery.plugins": {
+    "list": "Oem",
+    "description": "SamsungGallery Plugins\nChinese mapcamera plugin.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.messaging.extension.chn": {
+    "list": "Oem",
+    "description": "MessagingExtensionCh\nHas too much spying things.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.oda.service": {
+    "list": "Oem",
+    "description": "SamsungOdaService\nRequires google play services.\nAnother spying app collects sim info and other things.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.smartprovider": {
+    "list": "Oem",
+    "description": "Samsung File Provider\nProvides intelligent classification, search and image/video favorite when selecting images/videos to send to friends/Moments/Channels in WeChat app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.timezone.updater": {
+    "list": "Oem",
+    "description": "Time Zone Updater\nUsed to detect or set timezone.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.sec.android.yellowpage": {
+    "list": "Oem",
+    "description": "Yellow Page\nContain phone numbers of companies and services.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.singletake.service": {
+    "list": "Oem",
+    "description": "Single Take\nIt's face unlock I guess.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.secsoundpicker": {
+    "list": "Oem",
+    "description": "Ringtone Picker.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.android.providers.trash": {
+    "list": "Oem",
+    "description": "SecTrashProvider\nIndexes almost things to trash.\nThis app probably only exist on China Samsung.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.tencentwifisecurity": {
+    "list": "Oem",
+    "description": "Chinese Tencent flags risky networks and prevent to connect to them.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.ims.smk": {
+    "list": "Oem",
+    "description": "SimMobilityKit\nVoLTE calling, IMS.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.sm_cn": {
+    "list": "Oem",
+    "description": "Smart Manager\nTests hardware things.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.sm.devicesecurity.tcm": {
+    "list": "Oem",
+    "description": "Device security\nChinese scanning app for searching viruses.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.wifi.softap.resources": {
+    "list": "Oem",
+    "description": "Needed for wifi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.softsim": {
+    "list": "Oem",
+    "description": "Softsim Service\nInstalls softsim and it's full Chinese.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.sait.sohservice": {
+    "list": "Oem",
+    "description": "This weird app collects battery data and probably others, who knows?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.sskds": {
+    "list": "Oem",
+    "description": "SoterSskdsService\nThis app has something to 'com.tencent.soter.soterserver'.\nOnly china.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.tncpage": {
+    "list": "Oem",
+    "description": "TNCPageCN\nIt's app for enhance lock screen.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "vendor.qti.data.txpwradmin": {
+    "list": "Misc",
+    "description": "This app is from qualcomm, in androidmanifest.xml I found things like com.qualcomm.qti.qmsdataservices, qms is spyware,\npermissions uses: access wifi state, quary all packages, package usage stats.\nSo hidden network stats, more about it is this code is just logs, takes apm, wifi, bt status.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.vdcservice": {
+    "list": "Oem",
+    "description": "This app depends on Virtual Device Center app.\nHas network connection frameworks.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.vdc": {
+    "list": "Oem",
+    "description": "Virtual Device Center\nIt's Chinese app for Video calls.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.wallpaper.res": {
+    "list": "Oem",
+    "description": "Video Wallpaper .webp resources.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.wifi.ai": {
+    "list": "Oem",
+    "description": "No activities, provides WiFi diagnostics, has several ai models that it is not clear how useful they are.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.wifinetworkdiagnostics": {
+    "list": "Oem",
+    "description": "WifiNetworkDiagnostics\nDiagnostics network connection.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.wifi.decrease.scan.interval.resources": {
+    "list": "Oem",
+    "description": "Needed for WiFi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.wifi.increase.scan.interval.resources": {
+    "list": "Oem",
+    "description": "Needed for WiFi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.wifi.resources.qc": {
+    "list": "Oem",
+    "description": "Needed for WiFi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.android.wifi.resources.wifilock": {
+    "list": "Oem",
+    "description": "Needed for WiFi.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Unsafe"
+  },
+  "com.samsung.sprint.chameleon": {
+    "list": "Carrier",
+    "description": "Chameleon service which is a service designed to store sprint-specific properties (customizes some apps).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.qsfastpairoverlay": {
+    "list": "Oem",
+    "description": "About half street overlay, has to gms.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.app.aftersalecamera": {
+    "list": "Oem",
+    "description": "Calibration Camera app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.camerasaver": {
+    "list": "Oem",
+    "description": "Weird app that has BootCameraService. Probably you can't uninstall it.\nIn the code found things: createCameraPreviewSession, generateTextureIds, openCamera, setUpCameraOutputs.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.samsung.android.A10s.d01.wallpapermulti": {
+    "list": "Oem",
+    "description": "App with wallpapers to Samsung A10s.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.xiaomi.mbnloader": {
+    "list": "Oem",
+    "description": "Modem Config\nHidden app for Choosing Country vowifi?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   }
 }
