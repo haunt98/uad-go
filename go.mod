@@ -4,7 +4,7 @@ go 1.21.0
 
 require (
 	github.com/fatih/color v1.17.0
-	github.com/samber/lo v1.41.0
+	github.com/samber/lo v1.42.0
 )
 
 require (
