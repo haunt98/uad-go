@@ -1800,6 +1800,14 @@
     "labels": [],
     "removal": "Recommended"
   },
+  "com.samsung.android.adaptivebrightnessgo": {
+    "list": "Oem",
+    "description": "Samsung Adaptive Brightness\nFeature of Samsung devices that, as the name suggests, automatically adjusts the brightness level of display based on environmental lighting.\nThis feature is available even after uninstalling.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   "com.samsung.attvvm": {
     "list": "Carrier",
     "description": "Visual Voicemail\nSimple GUI for voicemail\n",
@@ -2840,7 +2848,7 @@
   },
   "com.huawei.android.internal.app": {
     "list": "Oem",
-    "description": "Component of Huawei sharing\n",
+    "description": "Component of Huawei sharing\nMay break the sharing function in several applications (in particular, apps will crash).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9059,7 +9067,7 @@
   },
   "com.oneplus.config": {
     "list": "Oem",
-    "description": "OPConfig\nOccasionally runs in the background.\nPackage source is: OPOnlineConfig.apk\nGuessing it might handle communication certificates and general network config for Oneplus apps.\nOnly has INTERNET and RECEIVE_BOOT_COMPLETED permissions.",
+    "description": "OPConfig\nOccasionally runs in the background.\nPackage source is: OPOnlineConfig.apk\nGuessing it might handle communication certificates and general network config for Oneplus apps.\nOnly has INTERNET and RECEIVE_BOOT_COMPLETED permissions.\n'Tips & Support' will be removed from settings.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16165,11 +16173,11 @@
   },
   "com.miui.powerkeeper": {
     "list": "Oem",
-    "description": "Battery and Performance\n(aggressive) MIUI power management (https://dontkillmyapp.com/xiaomi)\nThat's a weird app that also contains a DRM Manager and a service related to Cloud Backup\nHas obviously a lot of dangerous permissions.\nI guess removing this package will decrease the battery performance. Is it that noticeable? Can someone try?\nNOTE: REMOVING THIS PACKAGE CAUSES A BOOTLOOP ON THE REDMI PAD.",
+    "description": "Battery and Performance\n(aggressive) MIUI power management (https://dontkillmyapp.com/xiaomi)\nThat's a weird app that also contains a DRM Manager and a service related to Cloud Backup\nHas obviously a lot of dangerous permissions.\nI guess removing this package will decrease the battery performance. Is it that noticeable? Can someone try?\nNOTE: REMOVING THIS PACKAGE CAUSES A BOOTLOOP ON THE REDMI PAD.\nTo not get bootloop, log out from Mi Account.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.miui.zman": {
     "list": "Oem",
@@ -18036,8 +18044,8 @@
     "labels": []
   },
   "com.lge.ims": {
-    "description": "LG IMS\nIt's not a good app because it has a lot of debugging stuff.",
-    "removal": "Recommended",
+    "description": "LG IMS\nIt's not a good app because it has a lot of debugging stuff.\nBreaks calls.",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -26458,7 +26466,7 @@
   },
   "miui.systemui.plugin": {
     "list": "Oem",
-    "description": "System UI Plug-in. When removed, Android will use the AOSP style volume bar.",
+    "description": "System UI Plug-in. When removed, Android will use the AOSP style volume bar and reboot screen (option to power off or reboot your phone). Will break the iOS-style quick settings. The volume bar breakage only applies to MIUI-users. For HyperOS-users, all the above will apply.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -26490,11 +26498,11 @@
   },
   "com.android.updater": {
     "list": "Oem",
-    "description": "Mi Updater\nProvides system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE! Doesn't bootloop on MIUI 14.",
+    "description": "Mi Updater\nProvides system updates\nREMOVING THIS WILL BOOTLOOP YOUR DEVICE! Doesn't bootloop on MIUI 13 and above.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.lbe.security.miui": {
     "list": "Oem",
@@ -26514,19 +26522,19 @@
   },
   "com.miui.securitycenter": {
     "list": "Oem",
-    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nNOTE: REMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! Uninstalling this on the Redmi Pad or Miui 14 is not causing any bootloop, but you will lose some functionality like the battery status/usage page, as well as the app usage/removal page.",
+    "description": "MIUI Security app\nProvides \"protection and optimization tools\" \nApp lock, Data usage, Security scan, Cleaner, Battery saver, Blocklist and other features.\nThis package is mostly the front-end (UI).\nhttps://beta.pithus.org/report/f8c24ccfc526389ff9084505c60fba3d3463565f92e2015190e2974b370e7c4e\nNOTE: REMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! Uninstalling this on the Redmi Pad or Miui 13 and above is not causing any bootloop, but you will lose some functionality like the battery status/usage page, as well as the app usage/removal page.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.miui.securitycore": {
     "list": "Oem",
-    "description": "Core features of the \"com.miui.securitycenter\"\nREMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641\nOn Miui 14 it doesnt bootloop and looks performance like the same, also this app has annoying notifications when you running new app.",
+    "description": "Core features of the \"com.miui.securitycenter\"\nREMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641\nOn Miui 13 and above it doesnt bootloop and looks performance like the same, also this app has annoying notifications when you running new app.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.miui.system": {
     "list": "Oem",
@@ -26546,11 +26554,11 @@
   },
   "com.miui.securityadd": {
     "list": "Oem",
-    "description": "Related to the MIUI Security app\nREMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
+    "description": "Related to the MIUI Security app\nREMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE BELOW MIUI 13! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.xiaomi.misettings": {
     "list": "Oem",
@@ -27186,7 +27194,7 @@
   },
   "com.google.android.googlequicksearchbox": {
     "list": "Google",
-    "description": "Google Search box (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)\nRuns in the background.\nPointless. If you need a shortcut to Google on your homescreen just use a web-browser shortcut. Does also remove the Google Sound Search widget, but you can get that functionality from an app like Shazam, that additionally doesn't run in the background constantly like this package does.\nThis app also powers the Google Discover page (the news 'widget' when you go to the left of the home screen) and the app symbol called 'Google'.\nWARNING: disabling this package also breaks the Ok Google Search functionality.",
+    "description": "Google Search box (https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)\nRuns in the background.\nPointless. If you need a shortcut to Google on your homescreen just use a web-browser shortcut. Does also remove the Google Sound Search widget, but you can get that functionality from an app like Shazam, that additionally doesn't run in the background constantly like this package does.\nThis app also powers the Google Discover page (the news 'widget' when you go to the left of the home screen) and the app symbol called 'Google'.\nWARNING: disabling this package also breaks the Ok Google Search functionality as well as Google Lens.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -37205,5 +37213,61 @@
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  "com.gameloft.android.ANMP.GloftA9HM": {
+    "list": "Oem",
+    "description": "Asphalt 9: Legends",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.tencent.ngjp": {
+    "list": "Oem",
+    "description": "Arena of Valor ",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.epicgames.portal": {
+    "list": "Oem",
+    "description": "Epic Games for Android ",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.dti.samsung": {
+    "list": "Carrier",
+    "description": "Mobile Services Manager\nDigital Turbine app, pre-install some apps/games to your phone and its made by advertising company.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.adaptivebrightnessgo": {
+    "list": "Oem",
+    "description": "CameraLightSensor\nApp to test Adaptive Brightness.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.app.siofviewer": {
+    "list": "Oem",
+    "description": "Live focus\nNeeded for Live Focus in camera app.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.server.wifi.mobilewips.client": {
+    "list": "Oem",
+    "description": "MobileWips\nDetects suspicious activity on Wi-Fi network.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   }
 }
