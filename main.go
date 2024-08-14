@@ -4,7 +4,7 @@ import (
 	_ "embed"
 	"encoding/json"
 	"fmt"
-	"log/slog"
+	"log"
 	"os"
 	"sort"
 	"strings"
@@ -60,7 +60,7 @@ func main() {
 func searchUAD(risk bool, values ...string) []UnifiedApp {
 	uadApps := UADApps{}
 	if err := json.Unmarshal(uadBytes, &uadApps); err != nil {
-		slog.Error("json: failed to unmarshal apps", err)
+		log.Fatalf("json: failed to unmarshal: %v", err)
 		return nil
 	}
 
