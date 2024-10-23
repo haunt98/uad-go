@@ -37,7 +37,3 @@ clean:
 
 upstream:
     curl https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/main/resources/assets/uad_lists.json --output data/uad_lists.json
-    $(MAKE) format
-    git add data/
-    git commit -m "chore: sync upstream"
-    git push
