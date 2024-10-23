@@ -29,7 +29,7 @@ format:
     gofumpt -w -extra .
     deno fmt data/*.json
 
-build: clean
+build:
     go build -o guad .
 
 clean:
