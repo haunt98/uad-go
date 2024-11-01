@@ -2,13 +2,13 @@ package main
 
 import (
 	_ "embed"
-	"encoding/json"
 	"fmt"
 	"log"
 	"os"
 	"sort"
 	"strings"
 
+	"github.com/bytedance/sonic"
 	"github.com/fatih/color"
 	"github.com/samber/lo"
 )
@@ -59,7 +59,7 @@ func main() {
 
 func searchUAD(risk bool, values ...string) []UnifiedApp {
 	uadApps := UADApps{}
-	if err := json.Unmarshal(uadBytes, &uadApps); err != nil {
+	if err := sonic.Unmarshal(uadBytes, &uadApps); err != nil {
 		log.Fatalf("json: failed to unmarshal: %v", err)
 		return nil
 	}
