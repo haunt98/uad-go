@@ -3867,7 +3867,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   "com.samsung.android.app.sbrowseredge": {
     "list": "Oem",
@@ -5352,7 +5352,7 @@
       "com.samsung.android.spay"
     ],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   "com.sec.android.app.safetyassurance": {
     "list": "Oem",
@@ -12840,6 +12840,14 @@
     "labels": [],
     "removal": "Recommended"
   },
+  "com.casper.turkiye": {
+    "list": "Oem",
+    "description": "Support app for Casper, see https://play.google.com/store/apps/details?id=com.casper.turkiye&hl=en",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   "com.caf.fmradio": {
     "list": "Misc",
     "description": "https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/fm/tree/fmapp2/src/com/caf/fmradio\n",
@@ -16102,7 +16110,7 @@
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.miui.audiomonitor": {
     "list": "Oem",
@@ -19419,6 +19427,14 @@
     "neededBy": [],
     "labels": []
   },
+  "com.google.android.apps.privacy.wildlife": {
+    "description": "VPN by Google One. Discontinued. Succeeded by VPN by Google and Google Fi VPN.",
+    "removal": "Recommended",
+    "list": "Google",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": []
+  },
   "com.google.android.apps.pixelmigrate": {
     "description": "Data Transfer Tool\nIt's probably restore apps on setup wizard first-boot setup.",
     "removal": "Recommended",
@@ -20006,8 +20022,8 @@
     "labels": []
   },
   "com.nothing.thirdparty": {
-    "description": "Third party things. Useless frameworks.",
-    "removal": "Recommended",
+    "description": "Breaks the Glyph API, Composer and other apps that rely on the Glyph feature will not work anymore.",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -21678,8 +21694,8 @@
     "labels": []
   },
   "com.coloros.weather.service": {
-    "description": "Weather service\nProbably needed for weather.",
-    "removal": "Recommended",
+    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive.\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585",
+    "removal": "Unsafe",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -22030,8 +22046,8 @@
     "labels": []
   },
   "com.coloros.recents": {
-    "description": "Useless recents.",
-    "removal": "Recommended",
+    "description": "Recent apps. Provides navigation to alternate between multiple apps. Removal will result in no \"Recent App\" list and re-enablement will cause a soft reload.",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -23441,6 +23457,14 @@
   },
   "com.jrdcom.Elabel.a_overlay": {
     "description": "Useless overlay code for this bloatware app",
+    "removal": "Recommended",
+    "list": "Oem",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": []
+  },
+  "com.jrdcom.urlreservedapp1": {
+    "description": "TCL My Sites shortcut\nStub for mysites.glance.com.",
     "removal": "Recommended",
     "list": "Oem",
     "dependencies": [],
@@ -25547,8 +25571,8 @@
     "labels": []
   },
   "com.samsung.euicc": {
-    "description": "EuiccService\nHave Samsung analytics, logs, LPA service needed for UIM, eSIM Profiles.",
-    "removal": "Recommended",
+    "description": "EuiccService\neUICC refers to the architectural standards published by GSMA or implementations of those standard for eSIM, a device used to securely store one or more SIM card profiles, which are the unique identifiers and cryptographic keys used by service providers to uniquely identify and securely connect to mobile network devices.\nhttps://en.wikipedia.org/wiki/EUICC",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -27191,7 +27215,7 @@
   },
   "com.google.android.apps.messaging": {
     "list": "Google",
-    "description": "Google Messages (SMS+RCS) (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nRuns in the background.\nWARNING: Removing this may cause issues with receiving 2FA verification text messages and calls from Google on some devices.",
+    "description": "Google Messages (https://play.google.com/store/apps/details?id=com.google.android.apps.messaging)\nSMS and RCS app.\nNOTE: possibly a global dependency for SMS, MMS, RCS, OTP, and other services/verifications.\nWARNING: once disabled/uninstalled, even if reinstalled, a factory reset may be required to re-obtain full functionality.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -38033,5 +38057,13 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  "com.taboola.scoop": {
+    "list": "Oem",
+    "description": "Random wallpaper on lock screen (as i saw it personalizes it too). You need to open this app to make it work and when you swipe from right to left, it opens a menu on the right where random news appears.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 }
