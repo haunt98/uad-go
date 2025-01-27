@@ -5,7 +5,7 @@ go 1.21.0
 require (
 	github.com/bytedance/sonic v1.12.7
 	github.com/fatih/color v1.18.0
-	github.com/samber/lo v1.47.0
+	github.com/samber/lo v1.49.0
 )
 
 require (
@@ -17,5 +17,5 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/sys v0.25.0 // indirect
-	golang.org/x/text v0.16.0 // indirect
+	golang.org/x/text v0.21.0 // indirect
 )
