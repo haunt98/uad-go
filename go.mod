@@ -1,6 +1,6 @@
 module github.com/haunt98/uad-go
 
-go 1.21.0
+go 1.24
 
 require (
 	github.com/bytedance/sonic v1.12.10
