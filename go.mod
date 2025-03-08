@@ -3,13 +3,13 @@ module github.com/haunt98/uad-go
 go 1.24
 
 require (
-	github.com/bytedance/sonic v1.12.10
+	github.com/bytedance/sonic v1.13.1
 	github.com/fatih/color v1.18.0
 	github.com/samber/lo v1.49.1
 )
 
 require (
-	github.com/bytedance/sonic/loader v0.2.2 // indirect
+	github.com/bytedance/sonic/loader v0.2.4 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
