@@ -5,7 +5,7 @@ go 1.24
 require (
 	github.com/bytedance/sonic v1.13.2
 	github.com/fatih/color v1.18.0
-	github.com/samber/lo v1.49.1
+	github.com/samber/lo v1.50.0
 )
 
 require (
@@ -17,5 +17,5 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	golang.org/x/arch v0.0.0-20210923205945-b76863e36670 // indirect
 	golang.org/x/sys v0.25.0 // indirect
-	golang.org/x/text v0.21.0 // indirect
+	golang.org/x/text v0.22.0 // indirect
 )
