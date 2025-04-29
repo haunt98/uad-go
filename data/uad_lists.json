@@ -3550,14 +3550,6 @@
     "removal": "Recommended"
   },
   "com.cnn.mobile.android.phone.edgepanel": {
-    "list": "Misc",
-    "description": "TCL version of Parental Center, a parental control app.",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Advanced"
-  },
-  "com.cnn.mobile.android.phone.edgepanel": {
     "list": "Oem",
     "description": "CNN Edge panel. Twitter trends, and news from CNN.\n",
     "dependencies": [],
@@ -7626,6 +7618,14 @@
     "labels": [],
     "removal": "Expert"
   },
+  "com.android.server.deviceconfig.resources": {
+    "list": "Oem",
+    "description": "DeviceConfigServiceResources (Server*?). Part of com.android.configinfrastructure. Resources for the device's default server config.\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/modules/ConfigInfrastructure/service/ServiceResources/Android.bp",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   "com.android.server.NetworkPermissionConfig": {
     "list": "Aosp",
     "description": "Network configurations.",
@@ -10604,6 +10604,14 @@
     "labels": [],
     "removal": "Advanced"
   },
+  "com.samsung.android.callassistant": {
+    "list": "Oem",
+    "description": "Appears to handle a whole bunch of AI services related to Gallery and Phone. Can break stuff in OneUI 6.1+",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
   "com.samsung.phone.overlay.common": {
     "list": "Oem",
     "description": "Possibly the incoming-call screen?",
@@ -12810,7 +12818,7 @@
   },
   "com.whatsapp": {
     "list": "Misc",
-    "description": "Whatsapp (https://play.google.com/store/apps/details?id=com.whatsapp)\n)\n",
+    "description": "Whatsapp messenger.\nRequires Google Play Services to receive messages in the background.\nhttps://play.google.com/store/apps/details?id=com.whatsapp",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16082,7 +16090,7 @@
   },
   "com.android.globalFileexplorer": {
     "list": "Oem",
-    "description": "Misleading package name. It's the Xiaomi Files Manager on older phones\n",
+    "description": "Xiaomi File Explorer\/Manager.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16090,11 +16098,11 @@
   },
   "com.android.incallui": {
     "list": "Oem",
-    "description": "Xiaomi (and OnePlus) Phone dialer (here we go again! Another confusing package name)\n\nClosed-source app built on top of the AOSP package.\nThe name is doubly misleading because this package is the whole dialer. It does not only provide the 'in call' screen.",
+    "description": "Xiaomi Phone 11\nXiaomi's phone (dialer, incallui, etc.) app. Fetches APN lists on some phones. Package name is highly misleading.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Expert"
   },
   "com.android.thememanager": {
     "list": "Oem",
@@ -16316,11 +16324,11 @@
   },
   "com.miui.global.packageinstaller": {
     "list": "Oem",
-    "description": "The security check / virus scan that runs after package installation.\nDisabling/Uninstalling does not cause a bootloop and package installation still works fine.",
+    "description": "MIUI Package Installer. Removal causes bootloop on Xiaomi EU ROMs. Use the built-in `com.*.android.packageinstaller instead`.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Advanced"
+    "removal": "Unsafe"
   },
   "com.miui.guardprovider": {
     "list": "Oem",
@@ -25642,6 +25650,14 @@
     "neededBy": [],
     "labels": []
   },
+  "com.samsung.slsi.telephony.silentlogging": {
+    "description": "Hidden network logging. Safe to remove",
+    "removal": "Recommended",
+    "list": "Oem",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": []
+  },
   "com.sec.android.app.volumemonitorprovider": {
     "description": "VolumeMonitorProvider\nused in Digital Wellbeing to average the dB heard through earphones and display it.",
     "removal": "Recommended",
@@ -26815,7 +26831,7 @@
   },
   "miui.systemui.plugin": {
     "list": "Oem",
-    "description": "System UI Plug-in. When removed, Android will use the AOSP style volume bar and reboot screen (option to power off or reboot your phone). Will break the iOS-style quick settings. The volume bar breakage only applies to MIUI-users. For HyperOS-users, all the above will apply.",
+    "description": "System UI Plug-in. When using HyperOS, removing this package breaks the iOS-style quick settings and Android will use the AOSP-version of the volume bar & reboot screen (AKA the option to power off/reboot your device). If your device is using MIUI, only the volume bar will change.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -26975,7 +26991,7 @@
   },
   "com.android.chrome": {
     "list": "Google",
-    "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background.\nNOTE: disabling or uninstalling Chrome may break functionality for creating and storing passkeys (https://fidoalliance.org/passkeys/) on your phone, so keep this enabled if you want to use that form of authentication. G Play Services can provide this functionality on some devices",
+    "description": "Google Chrome (https://play.google.com/store/apps/details?id=com.android.chrome)\nOccasionally runs in the background.\nNOTE: Disabling or uninstalling Chrome may break functionality for creating and storing passkeys (https://fidoalliance.org/passkeys/) on your phone, so keep this enabled if you want to use that form of authentication. G Play Services can provide this functionality on some devices.\nWhen Chrome is updated via the Play Store, the Trichrome Library is also updated automatically. If Chrome is disabled or removed, it may impact WebView functionality.\nThis is because Chrome, WebView, and the Trichrome Library work together as a bundle starting from Android 10 (API 29) and above.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -27959,7 +27975,7 @@
   },
   "com.google.android.gms": {
     "list": "Google",
-    "description": "Google Play Services\ngms = Google Mobile Services\nIt is a layer that sits on top of the OS and provides a bunch of Google APIs, giving apps access to various Google Services.\nIf you remove it all the apps relying on Google Play Services whill either: \n- detect the lack of play services and refuse to run\n- detect the lack of play services but allow you to run (improperly) by dismissing an annoying popup\nRemoving Google Play Services can bootloop some devices, so be careful.\nDisabling this package will improve battery life a lot.\nIMPORTANT: You need to uncheck Find My Device from the \"Device admin apps\" settings panel to be able to disable this package.\nSearch \"admin\" in the settings search bar.",
+    "description": "Google Play Services\nGMS = Google Mobile Services.\nIt is a layer that sits on top of the OS and provides a lot of proprietary Google APIs, giving apps access to various Google Services, such as: \"fused\"-location (internet and GPS chip), QR Code scanner, 2FA, G-Drive storage, Firebase API, Cloud Messaging, etc...\nIf you remove it, all the apps relying on it will either:\n- detect the lack of Play-Services and refuse to run\n- detect the lack of Play-Services but allow you to run (improperly) by dismissing an annoying popup\nRemoving Google Play Services can boot-loop some devices, so be careful.\nDisabling this package will improve battery life significantly, as it always runs in the background.\nIMPORTANT: You need to uncheck \"Find My Device\" from the \"Device admin apps\" settings panel to be able to disable this package.\nSearch \"admin\" in the Settings-app search bar, or go to the Security category.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31843,7 +31859,7 @@
   },
   "com.unisoc.phone": {
     "list": "Oem",
-    "description": "LockAssistant\nRuns before the user unlocks the device (direct-boot aware). Reads IMEI, SMS, call log, uses gps/wifi. Unisoc is a CPU manufacturer.",
+    "description": "LockAssistant\nRuns before the user unlocks the device (direct-boot aware). Reads IMEI, SMS, call log, uses gps/wifi. Unisoc is a CPU manufacturer. Related to package `com.android.unisoc.telephony.server`.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -34659,11 +34675,11 @@
   },
   "com.android.DeviceAsWebcam": {
     "list": "Oem",
-    "description": "Using smartphone as webcam.",
+    "description": "Using smartphone as webcam. Dependency for Private space on Pixel devices.\nhttps://source.android.com/docs/security/features/private-space",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.android.omadm.service": {
     "list": "Oem",
@@ -34747,11 +34763,11 @@
   },
   "com.google.pixel.camera.services": {
     "list": "Oem",
-    "description": "CameraIDRemapper and a lot Debug stuff.",
+    "description": "CameraIDRemapper and a lot Debug stuff. Dependency for Private space on Pixel devices.\nhttps://source.android.com/docs/security/features/private-space",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.google.android.apps.camera.services": {
     "list": "Oem",
@@ -35067,11 +35083,11 @@
   },
   "com.android.unisoc.telephony.server": {
     "list": "Oem",
-    "description": "UICC stands for Universal Integrated Circuit Card.\nIt is a the physical and logical platform for the USIM and may contain additional USIMs and other applications.\n(U)SIM is an application on the UICC.\nOnly for China.",
+    "description": "Unisoc 4G and 5G drivers. Removal will break incoming calls. https://xdaforums.com/t/oukitel-wp23-pro-unlocking-bootloader-rooting-gsi.4642483/#post-89239693",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Expert"
   },
   "com.cdfinger.factorytest": {
     "list": "Oem",
@@ -36363,7 +36379,7 @@
   },
   "com.android.role.notes.enabled": {
     "list": "Oem",
-    "description": "Notes Role enabled\nUnknown overlay, but looks like a safe to remove, sets default notes.",
+    "description": "Notes Role enabled\nUnknown overlay, sets default notes. Breaks seamlessly disabling and enabling developer options on Google Pixel(s).\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -37681,7 +37697,6 @@
     "labels": [],
     "removal": "Unsafe"
   },
-
   "com.onyx.android.production.test": {
     "list": "Oem",
     "description": "Test app enabled by clicking 5 times on the Onyx Version, it contains tests for screen quality",
