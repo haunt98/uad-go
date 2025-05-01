@@ -37,4 +37,4 @@ clean:
     rm -rf guad
 
 upstream:
-    curl https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/main/resources/assets/uad_lists.json --output data/uad_lists.json
+    wcurl --curl-options="--clobber --netrc" https://raw.githubusercontent.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/main/resources/assets/uad_lists.json --output data/uad_lists.json
