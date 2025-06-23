@@ -28,7 +28,7 @@ format:
     # go install mvdan.cc/gofumpt@latest
     gofimports -w --company github.com/make-go-great,github.com/haunt98 .
     gofumpt -w -extra .
-    deno fmt data/*.json
+    bunx prettier --write data/*.json
 
 build:
     go build -o guad .
