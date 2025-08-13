@@ -7196,7 +7196,7 @@
   },
   "com.android.bluetooth": {
     "list": "Aosp",
-    "description": "Bluetooth service\n",
+    "description": "Bluetooth service\nHandles all Bluetooth functionality including device discovery, pairing, and data transfer.\nRemoving this will completely break Bluetooth functionality on the device.\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7324,7 +7324,7 @@
   },
   "com.android.emergency": {
     "list": "Aosp",
-    "description": "Emergency rescue\nShows emergency info on lockscreen and power menu. Safe to disable if you don't want it.\nLoads on device unlock/lockscreen and power menu, so it's basically always cached in RAM, but shouldn't use much/any battery, so the main thing gained from disabling this package is the ~9MB RAM it uses.",
+    "description": "Emergency rescue\nShows emergency info on lockscreen and power menu. Safe to disable if you don't want it.\nLoads on device unlock/lockscreen and power menu, so it's basically always cached in RAM, but shouldn't use much/any battery, so the main thing gained from disabling this package is the ~9MB RAM it uses.\nRemoving this will break Safety and Emergency in Settings and you will miss SOS alerts.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -16348,11 +16348,11 @@
   },
   "com.miui.global.packageinstaller": {
     "list": "Oem",
-    "description": "MIUI Package Installer. Removal causes bootloop on Xiaomi EU ROMs. Use the built-in `com.*.android.packageinstaller instead`.",
+    "description": "MIUI Package Installer. Provides sideload apps virus checker when installing APKs. Removal causes bootloop on Xiaomi.EU custom ROMs. Use the built-in com.android.packageinstaller instead.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Unsafe"
+    "removal": "Expert"
   },
   "com.miui.guardprovider": {
     "list": "Oem",
@@ -21894,8 +21894,8 @@
     "labels": []
   },
   "com.coloros.wifibackuprestore": {
-    "description": "WifiBackupRestore\nBackup Wi-Fi to the cloud",
-    "removal": "Recommended",
+    "description": "WifiBackupRestore\nBackup Wi-Fi to the cloud\nNOTE: Removing or disabling this app would lose the ability for Backup and Restore functionality to backup locally stored wifi access points or credentials locally on your device",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -26919,7 +26919,7 @@
   },
   "com.miui.securitycore": {
     "list": "Oem",
-    "description": "Core features of the \"com.miui.securitycenter\"\nREMOVING THIS WILL MOST LIKELY BOOTLOOP YOUR DEVICE! This may depend on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641\nOn Miui 13 and above it doesnt bootloop and looks performance like the same, also this app has annoying notifications when you running new app.",
+    "description": "Core features of the \"com.miui.securitycenter\"\nProvides Enterprise Mode, Dual App, Second Space, Fingerprint Add, Gesture Settings\nREMOVING THIS MAY BOOTLOOP YOUR DEVICE! Depends on your MIUI version and device, see\nhttps://github.com/0x192/universal-android-debloater/issues/641\nOn MIUI 13 and above it doesn't bootloop and performance appears similar, but this app shows annoying notifications when running new apps.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -27615,7 +27615,7 @@
   },
   "com.google.android.marvin.talkback": {
     "list": "Google",
-    "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)\nHelps blind and vision-impaired users.\n",
+    "description": "Android Accessibility Suite (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback)\nHelps blind and visually impaired users.\nWARNING: Causes com.motorola.dynamicvolume to not display individual apps and their respective volumes when volume button pressed. Seems to revert to an older (maybe testing) version of the dynamicvolume pkg?\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -30743,11 +30743,11 @@
   },
   "com.oplus.wifibackuprestore": {
     "list": "Oem",
-    "description": "Lets you backup your wifi credentials to the cloud. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa",
+    "description": "Lets you backup your wifi credentials to the cloud and possibly local wifi access point backups with local backup and restore feature. This app has obviously access to your wifi credential and have the INTERNET permission.\n\nPithus analysis: https://beta.pithus.org/report/76e43cf4dc55452f39d9b6117074f4072189d3c8ad9cb295a86e49438545f7aa\n\nWARNING: Removing this package may have similar effects of removing `com.coloros.wifibackuprestore` (see desc) as this could also break local wifi credential backups functionality without it. However, it's effects is only tested with ColorOS devices with similar package before Oneplus merge.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.tripledot.solitaire": {
     "list": "Misc",
