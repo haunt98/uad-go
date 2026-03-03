@@ -1,4 +1,12 @@
 {
+  "org.lineageos.jelly": {
+    "list": "Oem",
+    "description": "LineageOS Browser App, based on chromium.\nSafe to remove if you don't need it or have replaced it with another app.\nOtherwise there will be no browser app on your device.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
   "org.lineageos.recorder": {
     "list": "Oem",
     "description": "LineageOS Voice Recorder App.\nSafe to remove if you don't need it or have replaced it with another app.",
@@ -4505,7 +4513,7 @@
   },
   "com.motorola.systemserver": {
     "list": "Oem",
-    "description": "Moto Service Experience, debugging app.",
+    "description": "Moto Service Experience, debugging app.\nKeep this package for consistent Moto Fast Flashlight Gesture Functionality.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -5689,7 +5697,7 @@
   },
   "com.samsung.android.smartmirroring": {
     "list": "Oem",
-    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV (https://www.samsung.com/us/apps/smart-view-2/)\nDependency for com.samsung.android.video",
+    "description": "Samsung Smart View\nEnable you to mirror screen your phone to a TV (https://www.samsung.com/us/apps/smart-view-2/)\nDependency for com.samsung.android.video\nUninstalling this breaks edge panels feature; edge panel won't work and will also crash OneUI Home when trying to switch edge panels on from settings > display.\nThe edge panels package (com.samsung.android.app.cocktailbarservice and com.samsung.android.app.appsedge) doesn't exist on my phone so maybe on newer devices Samsung moved that functionality to this package instead. Tested on Galaxy S25 FE Android 16",
     "dependencies": [],
     "neededBy": ["com.samsung.android.video"],
     "labels": [],
@@ -5893,6 +5901,14 @@
   "com.samsung.android.widgetapp.yahooedge.sport": {
     "list": "Oem",
     "description": "Special edge panel widget for Yahoo Sport\n",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.widgetapp.yahooedge.news": {
+    "list": "Oem",
+    "description": "Special edge panel widget for Yahoo News\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -7556,7 +7572,7 @@
   },
   "com.samsung.android.honeyboard": {
     "list": "Oem",
-    "description": "Samsung keyboard\nWARNING: do NOT disable if you don't have another keyboard with direct boot mode support, or you'll be stuck at boot (no keyboard to unlock the phone).\nhttps://developer.android.com/training/articles/direct-boot\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\nWARNING: Removing this packages breaks the Accessibility settings on Android 11.",
+    "description": "Samsung keyboard\nWARNING: do NOT disable if you don't have another keyboard with direct boot mode support, or you'll be stuck at boot (no keyboard to unlock the phone).\nhttps://developer.android.com/training/articles/direct-boot\nWARNING: Do NOT remove this package with root if it wasn't first uninstalled with the non-root method.\nWARNING: Removing this packages breaks the Accessibility settings on Android 11.\nWARNING: Removing this packages breaks the edge panel clipboard.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -9228,7 +9244,7 @@
   },
   "com.oneplus.soundrecorder": {
     "list": "Oem",
-    "description": "Recorder\nOnePlus sound recording app.\nRequires turning on\"Allow modifying system settings\" to use for some reason? Probably tied to recording phone-calls.",
+    "description": "Recorder\nOnePlus sound recording app. Requires turning on\"Allow modifying system settings\" to use for some reason? Probably tied to recording phone-calls.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -13578,38 +13594,6 @@
     "labels": [],
     "removal": "Recommended"
   },
-  "com.nttdocomo.android.applicationmanager": {
-    "list": "Carrier",
-    "description": "Docomo Application Manager",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
-  "com.nttdocomo.android.store": {
-    "list": "Carrier",
-    "description": "Docomo App Market",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
-  "com.nttdocomo.android.dhome": {
-    "list": "Carrier",
-    "description": "Docomo Launcher",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Advanced"
-  },
-  "com.nttdocomo.android.initialization": {
-    "list": "Carrier",
-    "description": "Docomo Initialization app",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
   "com.oppo.fingerprints.fingerprintsensortest": {
     "list": "Oem",
     "description": "Fingerprint sensort test\n",
@@ -13924,7 +13908,7 @@
   },
   "com.microsoft.office.powerpoint": {
     "list": "Misc",
-    "description": "",
+    "description": "PowerPoint\n",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -22476,7 +22460,7 @@
     "labels": []
   },
   "com.coloros.assistantscreen": {
-    "description": "HeyTap Shelf. ColorOS 'At a Glance'.\nShelf provides a variety of widgets that let you access important information or services from apps with ease. Removing will also be unable to access third-party widgets in ColorOS 16\nSwipe down on the Home screen to enter Shelf.\nhttps://play.google.com/store/apps/details?id=com.coloros.assistantscreen",
+    "description": "Shelf. ColorOS/OnePlus 'At a Glance'.\nShelf provides a variety of widgets that let you access important information or services from apps with ease. Removing will also be unable to access third-party widgets (these are different from the 'normal' widgets in any launcher) in ColorOS 16/OxygenOS 16\nSwipe down on the Home screen to enter Shelf.\nhttps://play.google.com/store/apps/details?id=com.coloros.assistantscreen",
     "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
@@ -22541,7 +22525,7 @@
     "labels": []
   },
   "com.coloros.accessibilityassistant": {
-    "description": "Another thing for smart assistant",
+    "description": "AI VoiceScribe.\nIt's used to convert speech to text in real-time for accessibility purposes. Can be safely deleted if you don't use AI services.",
     "removal": "Recommended",
     "list": "Oem",
     "dependencies": [],
@@ -22966,8 +22950,8 @@
     "labels": []
   },
   "com.coloros.weather.service": {
-    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive.\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585",
-    "removal": "Unsafe",
+    "description": "Name indicates it's for the weather, but removing this causes the screen to flash and the phone will eventually become unresponsive.\nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585. Disabling instead does not seem to cause this problem, see \nhttps://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/585#issuecomment-3796739025",
+    "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -23022,7 +23006,7 @@
     "labels": []
   },
   "com.oplus.postmanservice": {
-    "description": "Calibration, scan QR code test",
+    "description": "Diagnostics\nFor calibration of hardware",
     "removal": "Recommended",
     "list": "Oem",
     "dependencies": [],
@@ -23406,8 +23390,8 @@
     "labels": []
   },
   "com.oplus.audio.effectcenter": {
-    "description": "AudioEffectCenter\nDolby support for Chinese apps and some Google. It's so bloated.",
-    "removal": "Recommended",
+    "description": "Sound effects and EQ settings, Dolby support for Chinese apps and some Google. Remove if you aren't planning to use sound effects or EQ.",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -27171,7 +27155,7 @@
     "labels": []
   },
   "com.oplus.romupdate": {
-    "description": "Update Service\nIf you wanna remove it to keep ram, it's a bad idea. Better remove com.oplus.ota too if you don't plan to update system.",
+    "description": "Update Service\nResponsible for installing updates.",
     "removal": "Expert",
     "list": "Oem",
     "dependencies": [],
@@ -27507,8 +27491,8 @@
     "labels": []
   },
   "com.oplus.linker": {
-    "description": "OPSynergy\nUsed for the Synergy app to link your phone to your PC (It doesn't work well beyond controlling your phone from your PC).",
-    "removal": "Recommended",
+    "description": "OPSynergy\nUsed for the Synergy app to link your phone to your PC (it doesn't work well beyond controlling your phone from your PC). This app is a dependency of screencast. Disabling will cause the screencast app to break.",
+    "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
     "neededBy": [],
@@ -27853,6 +27837,14 @@
     "neededBy": [],
     "labels": []
   },
+  "com.oppo.usercenter": {
+    "description": "Just bloatware for account details and marketing of OPPO. Cannot log into OPPO/HeyTap account after disabling. Safe to disable if OPPO account is not used.",
+    "removal": "Advanced",
+    "list": "Oem",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": []
+  },
   "com.coloros.findmyphone": {
     "description": "Find phone\nFind phone, logout from oppo account before",
     "removal": "Recommended",
@@ -27974,7 +27966,7 @@
     "labels": []
   },
   "com.oplus.trafficmonitor": {
-    "description": "OnePlus Data usage\nOneplus traffic monitor (monthly data usage, etc). If removed, the 'Data Usage' option under 'Mobile network' will not work. Also App Info screen's 'Data usage' option will disappear",
+    "description": "OnePlus Data usage / OnePlus traffic monitor (monthly data usage, etc). If removed, the 'Data Usage' option under 'Mobile network' will not work. Also App Info screen's 'Data usage' option will disappear. Required to restrict an app from accessing the network via settings > app info.",
     "removal": "Advanced",
     "list": "Oem",
     "dependencies": [],
@@ -31263,7 +31255,7 @@
   },
   "com.transsnet.store": {
     "list": "Oem",
-    "description": "Palm Store. App store with unsecure apps and probably malware. Has ads trackers and lot of intrusives permissions. Shows intrusive ads and popups.\nPithus analysis: https://beta.pithus.org/report/35d762b27c9e16703adf1731b74bef2c53a753b6a7475c425bced53b553758e5",
+    "description": "Palm Store. App store with unsecure apps and probably malware. Has ads trackers and lot of intrusives permissions. Shows intrusive ads and popups.\nRequired for one-time removal of \"Hot Apps\" folder in XOS Launcher (via long press and \"Properties\").\nPithus analysis: https://beta.pithus.org/report/35d762b27c9e16703adf1731b74bef2c53a753b6a7475c425bced53b553758e5",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31439,11 +31431,11 @@
   },
   "com.oplus.cosa": {
     "list": "Oem",
-    "description": "APP Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\n\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\nCannot be uninstalled but it can be disabled. Note: removing this package prevents the OnePlus Game Center to detect games.\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.",
+    "description": "APP Enhancement Services\nIf enabled, connects to OPPO servers (icosa-service-eu.allawnos.com) every time a new app is installed. Seems to be mostly focused on gaming performance optimisation according to the settings description:\n'[...] a service that optimises phone performance for specific apps and game scenarios. [...] frame rates, battery usage, touch sensitivity, network connection, vibration and gameplay assistance features.'\nCan be disabled via hidden setting (Settings -> Search 'App Enhancement Services' -> App Enhancement Services).\nNote: removing this package prevents the OnePlus Game Center to detect games.\nCannot be uninstalled but it can be disabled. Note: removing this package prevents the OnePlus Game Center to detect games.\nPithus analysis: https://beta.pithus.org/report/f55e935357865f4647e59c98afb5a3a46aba22a48844d80d2819d122781e3fde.\nAnother note: the process is necessary for the GameEventServiceService which ensures that apps recognized as games have a fixed refresh rate, not an adaptive refresh rate; without it, refresh rates may be reduced from 120hz to 60hz. When there is not much going on on screen, there can even be drops in the refresh rate to 30hz and 1hz. There is no option to turn off adaptive refresh rate, so one is reliant on this OS service to undo its own damage. Without this, there also seems to be no way to display 120fps cloud gaming at 120hz (tested with Moonlight/Artemsi), as the OS does not exempt the streaming app from the adaptive refresh rate rule.",
     "dependencies": [],
     "neededBy": ["com.oneplus.gamespace"],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.oplus.blur": {
     "list": "Oem",
@@ -31663,7 +31655,7 @@
   },
   "com.coloros.compass2": {
     "list": "Oem",
-    "description": "ColorOS default compass app\nKeep in mind that by using this app you give your location to the weather Oppo servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
+    "description": "ColorOS and OxygenOS 16's default compass app\nKeep in mind that by using this app you give your location to the weather Oppo/OnePlus servers.\nPithus analysis: https://beta.pithus.org/report/9a965f5587fa6ee21c526612f3d72c50ef3cc53679b741260298387c44f5a3dc",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31727,7 +31719,7 @@
   },
   "com.coloros.video": {
     "list": "Oem",
-    "description": "Video Player\nDefault Oppo video player with too much permissions (21) for a video player!\nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
+    "description": "Video Player\nDefault Oppo and OnePlus video player with too much permissions (21) for a video player!\nNote: using inbuilt screen recorder you won't be able to open the recorded video from the notification view.\n\nPithus analysis: https://beta.pithus.org/report/4ceb96c23ad0e26ee8eceab293d251f8b1bddaf4a901741ee467e0bb867db6e9",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -31735,7 +31727,7 @@
   },
   "com.heytap.browser": {
     "list": "Oem",
-    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo. Full of ads and spams you in notifications. You should never use this browser\nHeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
+    "description": "Oppo Browser\nRebranded HeyTap browser for Oppo and OnePlus devices. Full of ads and spams you in notifications. You should never use this browser\nHeyTap's terrible privacy policy: https://brand.heytap.com/eu/privacy.html",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -33391,22 +33383,22 @@
   },
   "com.felicanetworks.mfc": {
     "list": "Oem",
-    "description": "[Mobile FeliCa Client](https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main) is an essential app for using FeliCa.\nUninstalling this may occur errors to install this in apps which uses FeliCa. You can uninstall this if you don't use FeliCa-related services. Uninstalling this does not remove the data saved in FeliCa.",
+    "description": "Mobile FeliCa Client (https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main)\nEssential app for using FeliCa.\nUninstalling this may occur errors to install this in apps which uses FeliCa. You can uninstall this if you don't use FeliCa-related services.\nNOTE: Uninstalling this does not remove the data saved in FeliCa.",
     "dependencies": [],
     "neededBy": [
       "com.felicanetworks.mfw.a.boot",
       "com.felicanetworks.mfm.main"
     ],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.felicanetworks.mfm.main": {
     "list": "Oem",
-    "description": "[Osaifu-Keitai App](https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main) is a digital wallet app for Osaifu-Keitai brand.\nIt does not appear to be related to the FeliCa core functionality, but is required for services under the Osaifu-Keitai brand, such as iD and Mobile Suica.\nFor details, please [check the app description](https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main) on Play Store.",
+    "description": "Osaifu-Keitai App (https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main)\nA digital wallet app for Osaifu-Keitai brand.\nIt does not appear to be related to the FeliCa core functionality, but is required for services under the Osaifu-Keitai brand, such as iD and Mobile Suica.\nFor details, please check the app description (https://play.google.com/store/apps/details?id=com.felicanetworks.mfm.main) on Play Store.",
     "dependencies": ["com.felicanetworks.mfc"],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.felicanetworks.mfs": {
     "list": "Oem",
@@ -33418,19 +33410,246 @@
   },
   "com.felicanetworks.mfw.a.boot": {
     "list": "Oem",
-    "description": "[Osaifu-Keitai Web Plugin](https://play.google.com/store/apps/details?id=com.felicanetworks.mfw.a.boot) is used by websites on your browser to get payment information and process payments with FeliCa. Safe to remove if you don't use Osaifu-Keitai online.",
+    "description": "Osaifu-Keitai Web Plugin (https://play.google.com/store/apps/details?id=com.felicanetworks.mfw.a.boot)\nUsed by websites on your browser to get payment information and process payments with FeliCa.\nSafe to remove if you don't use Osaifu-Keitai online.",
     "dependencies": ["com.felicanetworks.mfc"],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.sec.nfc.felicalocktest": {
-    "list": "Carrier",
+    "list": "Oem",
     "description": "Testing FeliCa carrier remote lock. Common to Softbank, au, and docomo.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
     "removal": "Recommended"
+  },
+  "com.nttdocomo.android.anmane2": {
+    "list": "Carrier",
+    "description": "Likely a placeholder for docomo's corporate MDM service. Empty package and disabled by default on consumer devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.anshinsecurity": {
+    "list": "Carrier",
+    "description": "Anshin-security (https://www.docomo.ne.jp/service/anshin_security/)\ndocomo's security suite providing virus scanning, spam call/email prevention and so on.\nSafe to remove, but you may want to check https://mydocomo.docomo.ne.jp for subscriptions. Frequently bundled with device insurance service.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.apnsw": {
+    "list": "Carrier",
+    "description": "APN switching control\nResource-only stub. Safe to remove.\nMay potentially cause tethering issues on legacy (pre-2016) models due to docomo's APN-switching requirements?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.applicationmanager": {
+    "list": "Carrier",
+    "description": "docomo Application Manager\nManages installation and updates of docomo-specific app.\nSafe to remove if you don't use any docomo service.\nNOTE: After reinstall, reboot needed to launch in some cases.",
+    "dependencies": [],
+    "neededBy": [
+      "com.nttdocomo.android.homezozo",
+      "com.nttdocomo.android.dhome"
+    ],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.nttdocomo.android.databackup": {
+    "list": "Carrier",
+    "description": "Backup feature for application of docomo's service, mainly provides schedule/memo's cloud sync function.",
+    "dependencies": [],
+    "neededBy": ["com.nttdocomo.android.schedulememo"],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.devicehelp": {
+    "list": "Carrier",
+    "description": "Recommended usage tips\nIntrusive. Provide \"helpful hints\" based on user activity, but behaving like adware by showing frequent pop-ups.\nRequires high-level permissions such as Accessibility and \"Draw over other apps\" (overlay) to monitor user actions.\nIt's not enabled by default, but uninstalling recommended for a cleaner, more private experience.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.dmenu2": {
+    "list": "Carrier",
+    "description": "d-menu\nWeb page shortcut and notification receiver.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.docomoset": {
+    "list": "Carrier",
+    "description": "docomo service/cloud Settings\nAdds a \"docomo service/cloud\" entry to the system Settings app. Simple navigation screen providing entry points to docomo-specific app settings, such as d-account and docomo application manager.\nEssential for launching d-account settings.\nSafe to remove if you don't use any docomo service.",
+    "dependencies": [],
+    "neededBy": ["com.nttdocomo.android.idmanager"],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.nttdocomo.android.homezozo": {
+    "list": "Carrier",
+    "description": "docomo LIVE UX\ndocomo's default home screen (launcher).\nSafe to remove ONLY IF another launcher is installed. Certain devices such as dtab may not have any other home screen apps preinstalled.\ndocomo application manager (com.nttdocomo.android.applicationmanager) must be installed to use this.",
+    "dependencies": ["com.nttdocomo.android.applicationmanager"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.nttdocomo.android.dhome": {
+    "list": "Carrier",
+    "description": "Legacy docomo LIVE UX\ndocomo's default home screen (launcher).\nSafe to remove ONLY IF another launcher is installed. Certain devices such as dtab may not have any other home screen apps preinstalled.\ndocomo application manager (com.nttdocomo.android.applicationmanager) must be installed to use this.",
+    "dependencies": ["com.nttdocomo.android.applicationmanager"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.nttdocomo.android.idmanager": {
+    "list": "Carrier",
+    "description": "d ACCOUNT Settings\nAccount Settings for d-account, includes an authentication component for other docomo apps.\nSafe to remove if you don't use any docomo services, but ensure you check your login method as you may need this app for two-step authentication when logging in from other devices.",
+    "dependencies": ["com.nttdocomo.android.docomoset"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.nttdocomo.android.initialization": {
+    "list": "Carrier",
+    "description": "DOCOMO initialization\nOOBE (Initial setup) component for docomo devices. Safe to remove.\nTips: Apps deleted here will be restored when you factory reset the device!",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.mascot": {
+    "list": "Carrier",
+    "description": "my daiz (https://www.docomo.ne.jp/service/mydaiz/)\ndocomo's information (e.g. weather, news) app. Also displays a mascot (looks like tofu) on docomo LIVE UX. Requires lots of permissions.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.msg": {
+    "list": "Carrier",
+    "description": "+Message\nA messaging app using a carrier-customized RCS implementation by Softbank, au, and docomo. It adds LINE-like features to the standard SMS/RCS.\nSafe to remove, but recommended to have an alternative SMS app for OTPs.\nGoogle Messages is a simpler and more standard alternative.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.mymagazine": {
+    "list": "Carrier",
+    "description": "SmartNews for docomo\nNews app. Special version of SmartNews for docomo user.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.networkservice": {
+    "list": "Carrier",
+    "description": "Office Link Settings\nProvides \"Office Link\" service (docomo's enterprise internal line service). Typically accessed through the settings menu of the OEM Phone app.\nSafe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.pf.dcmippushaggregator": {
+    "list": "Carrier",
+    "description": "A background platform service that manages docomo's proprietary IP push notification system.\nSafe to remove if you don't need to receive docomo's service notifications.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.remotelock": {
+    "list": "Carrier",
+    "description": "Omakase-lock (https://www.docomo.ne.jp/service/lock/)\nRemote device lock service. Allows docomo customer support to lock your device upon request.\nSafe to remove. Google's \"Find Hub\" are better-integrated alternatives including NFC (=FeliCa) remote lock.\nNOTE: To uninstall this, open settings > App permission > Special app access > Device admin apps and disable this app (May vary depending on your device).\nFor FeliCa remote lock, a separate package (com.nttdocomo.android.felicaremotelock) is used.",
+    "dependencies": ["com.nttdocomo.android.felicaremotelock"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.schedulememo": {
+    "list": "Carrier",
+    "description": "Schedule & Memo\n2 different apps in one package; docomo's schedule and memo apps.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.store": {
+    "list": "Carrier",
+    "description": "d-Point Market\nWeb page shortcut and notification receiver.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.wipe": {
+    "list": "Carrier",
+    "description": "Remote Wipe (https://www.docomo.ne.jp/service/initialization/)\nAllows docomo customer support to wipe your device upon request. This does NOT clear data inside the FeliCa chip.\nSafe to remove. Google's \"Find Hub\" or oem provided services are better-integrated alternatives.\nNOTE: To uninstall this, open settings > App permission > Special app access > Device admin apps and disable this app (May vary depending on your device).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "jp.co.nttdocomo.anshinmode": {
+    "list": "Carrier",
+    "description": "Anshin-Filter for docomo (https://www.docomo.ne.jp/service/anshin_filter/0)\nCarrier-provided parental controls. Terrible.\nCauses excessive battery drain on both parent and child devices due to heavy background polling, and a ton of other issues.\nIf you care about your child's better well-being, digital experience and parent-child relationships, consider using alternative services such as Google Family link.\nStrongly recommended to uninstall.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "jp.co.nttdocomo.carriermail": {
+    "list": "Carrier",
+    "description": "docomo mail\nCarrier mail app. Safe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "jp.co.nttdocomo.lcsapp": {
+    "list": "Carrier",
+    "description": "docomo location information\nProvides \"Keitai-Osagashi Service\" (Mobile Phone Finder Service) and \"imadoco search\" (parental tracking) by docomo.\ncom.nttdocomo.android.docomoset is needed to launch settings screen.\nSafe to remove, but you may want to check https://mydocomo.docomo.ne.jp for subscriptions and \"imadoco search\" Opt-Out at https://spf.spmode.ne.jp/location/posinfo_sp (spf.spmode.ne.jp is only accessible via mobile network).\nGoogle's \"Find Hub\" and \"Family Link\" are free and better alternatives integrated with Android.",
+    "dependencies": ["com.nttdocomo.android.docomoset"],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "jp.co.nttdocomo.saigaiban": {
+    "list": "Carrier",
+    "description": "Disaster kit (https://www.docomo.ne.jp/info/disaster/disaster_kit/)\nA dedicated app for docomo's safety registration service used during major emergencies. It allows users to post and search for safety status.\nNOTE: This is not related to the core functionality of Area Mail (early warning). For checking Area Mail history, you can find it in system settings.\nSafe to remove; use web171.jp, Disaster Message Dial (171) or LINE's safety status feature instead for about safety status.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nttdocomo.android.felicaremotelock": {
+    "list": "Oem",
+    "description": "This is used to lock the Osaifu-Keitai (FeliCa), works with Omakase-lock (com.nttdocomo.android.remotelock).\nSafe to remove.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.overlay.dcmconfig": {
+    "list": "Oem",
+    "description": "Static overlay that sets \"config_systemContacts\" to \"docomo phonebook\" (customized com.android.contacts).\nNOTE: Safe to remove, reboot needed after uninstalling.\n\"docomo phonebook\" itself is safe to remove whether this overlay is installed.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.overlay.dcmconfig.sms": {
+    "list": "Oem",
+    "description": "Static overlay that sets \"config_defaultSms\" to \"+Message\" (com.nttdocomo.android.msg).\nNOTE: Safe to remove, reboot needed after uninstalling.\n\"+Message\" itself is safe to remove whether this overlay is installed.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
   },
   "com.samsung.android.nfc.resources.japan": {
     "list": "Oem",
@@ -33779,14 +33998,6 @@
   "com.sec.android.app.felicatest": {
     "list": "Oem",
     "description": "FeliCa Test, hidden debugs, logs HAL_Nfc",
-    "dependencies": [],
-    "neededBy": [],
-    "labels": [],
-    "removal": "Recommended"
-  },
-  "com.nttdocomo.android.felicaremotelock": {
-    "list": "Oem",
-    "description": "FeliCa Remote security things, not needed",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -34290,7 +34501,15 @@
   },
   "jp.co.omronsoft.mushroom.CommonPhrase": {
     "list": "Oem",
-    "description": "Japanese Phrases app",
+    "description": "Provides a feature called \"Mushroom\" that is a phrase table shared between Japanese keyboards.\nJapanese keyboards still work without this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "jp.co.omronsoft.mushroom.commonphrase": {
+    "list": "Oem",
+    "description": "Provides a feature called \"Mushroom\" that is a phrase table shared between Japanese keyboards.\nJapanese keyboards still work without this.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -34555,6 +34774,14 @@
   "com.sec.android.app.tfstatus": {
     "list": "Carrier",
     "description": "Tracfone app, function unknown",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.sec.android.app.tfunlock": {
+    "list": "Carrier",
+    "description": "The unlocking interface and process when unlocking a Tracfone-based phone. Probably needed for unlocking your carrier status. probably needed if you want to unlock your phone from a Tracfone service.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -35602,7 +35829,7 @@
   },
   "com.oplus.cota": {
     "list": "Oem",
-    "description": "Carrier software updater?\nLooks like software updater for carrier phones.",
+    "description": "Configuration Update Over The Air\nNeeded for OTA updates. Likely needed to download and install system updates, device configuration, and carrier/enterprise customizations on OnePlus devices. It ensures your device stays up-to-date and compliant with carrier or company requirements, and interacts with the user only when necessary (e.g., update dialogs, legal statements).",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -35671,6 +35898,38 @@
     "neededBy": [],
     "labels": [],
     "removal": "Advanced"
+  },
+  "com.oplus.aicall": {
+    "list": "Oem",
+    "description": "Provides AI summaries in the ODialer app",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.oplus.aimemory": {
+    "list": "Oem",
+    "description": "Mind Space (also called 'Breeno Memory')\nSaves and summarizes content using AI. Runs on the background, even though when you're not using it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.oplus.aiwriter": {
+    "list": "Oem",
+    "description": "AI Writer\nPop-up for AI text generation, often appears in places that are not text input fields.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.oplus.aipaint": {
+    "list": "Oem",
+    "description": "AI Paint\nUnsure what it's used for but probably has to do with editing images.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   },
   "com.oplus.apprecover": {
     "list": "Oem",
@@ -41223,5 +41482,557 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  "com.fivemobile.myaccount": {
+    "list": "Carrier",
+    "description": "App for managing your Rogers account.\nRogers violates section F.1 of Canada's Wireless Code, they refuse to unlock devices sold before December 1, 2017, even if it doesn't affect you, don't support practices like this! Switch to another carrier (such as Telus) if possible.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.nhl.gcl.canada": {
+    "list": "Carrier",
+    "description": "Rogers NHL app. Just opens a 404 page in the web browser. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.rogers.npd.appzone": {
+    "list": "Carrier",
+    "description": "An app store just for Rogers bloat. Why the hell would you want this?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.communitake.remotecontrolservice": {
+    "list": "Carrier",
+    "description": "Remote management app installed by Bell on some devices. Has access to almost every permission so probably best to remove this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.epson.mobilephone.samsungprintservice": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.fixmo.isa": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.fmm.dm": {
+    "list": "Oem",
+    "description": "Samsung's Find My Mobile service for tracking your phone if you lost it. Unsure of the difference(s) between this and com.fmm.ds. Can lead to logcat spam in some cases.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.fmm.ds": {
+    "list": "Oem",
+    "description": "Samsung's Find My Mobile service for tracking your phone if you lost it. Unsure of the difference(s) between this and com.fmm.dm, however this one doesn't logcat spam unlike com.fmm.dm.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.hp.android.printservice": {
+    "list": "Misc",
+    "description": "Print to your HP printer using your Android phone. Most reviews on Google Play say it doesn't work very well. https://play.google.com/store/apps/details?id=com.hp.android.printservice",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.infraware.polarisviewer5": {
+    "list": "Oem",
+    "description": "A dumbed down version of Polaris Office Editor 5 (which is a Microsoft Office like app).",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.lifevibes.trimapp": {
+    "list": "Oem",
+    "description": "Video trimmer used by the default Samsung Gallery app on some older Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.LocalFota": {
+    "list": "Oem",
+    "description": "Required to install OTA updates on older Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.qualcomm.interfacepermissions": {
+    "list": "Misc",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.app.headlines": {
+    "list": "Oem",
+    "description": "Flipboard app for Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.app.shareaccessibilitysettings": {
+    "list": "Oem",
+    "description": "Seems to be like a package for saving your accessibility settings, likely to transfer them to another phone.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.android.intelligenceservice": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.proxy.calendar": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.proxy.contacts": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.proxy.memo": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.proxy.sbrowser": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.proxy.snote3": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.scloud.quota": {
+    "list": "Oem",
+    "description": "Literally all this app does is tell you when you're out of storage on your Samsung Cloud. Why this isn't part of the main Samsung Cloud app? I have no idea.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.app.video": {
+    "list": "Oem",
+    "description": "Can't figure out what this package does, but no adverse effects to removing it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.everglades.video": {
+    "list": "Oem",
+    "description": "Part of the TouchWiz video player.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.samsung.pickuptutorial": {
+    "list": "Oem",
+    "description": "A guide to some gestures on Samsung devices, however it doesn't seem to be accessable anywhere. Maybe intended for demo units?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.allshare.service.controlshare": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.allshare.service.fileshare": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.allshare.service.mediashare": {
+    "list": "Oem",
+    "description": "Share media to your other Samsung devices with Allshare. Allshare is discontinued and no longer present on modern Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.FileShareClient": {
+    "list": "Oem",
+    "description": "Receive files from Samsung devices with Allshare. Allshare is discontinued and no longer present on modern Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.FileShareServer": {
+    "list": "Oem",
+    "description": "Send files to Samsung devices with Allshare. Allshare is discontinued and no longer present on modern Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.filtermanager": {
+    "list": "Oem",
+    "description": "Manage camera filters on your Samsung device.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.app.interactivekeyguardtutorial": {
+    "list": "Oem",
+    "description": "A guide on how to unlock your phones screen, however it doesn't seem to be present anywhere on the phone. Maybe intended for demo units?",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.mediasync": {
+    "list": "Oem",
+    "description": "Share music for group play.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.mobileprint": {
+    "list": "Oem",
+    "description": "Samsung print service for supported printers.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.app.mv.player": {
+    "list": "Oem",
+    "description": "Share videos to other devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.rakein": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.sbrowsertry": {
+    "list": "Oem",
+    "description": "Samsung Internet browser, there are much better browsers available and Samsung Internet has a really sketchy privacy policy.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.app.SmartClipService": {
+    "list": "Oem",
+    "description": "Default image editor on older Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.app.videoplayer": {
+    "list": "Oem",
+    "description": "TouchWiz video player.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.app.wluc": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.cloudagent": {
+    "list": "Oem",
+    "description": "Part of Dropbox integration on TouchWiz",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.cloudagent.dropboxoobe": {
+    "list": "Oem",
+    "description": "Get a free 50GB Dropbox account with your Samsung device! Would be useful, but Dropbox ended this offer about 10 years ago.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.directshare": {
+    "list": "Oem",
+    "description": "Part of Samsung's SBeam service. SBeam has known security vulnerabilities (https://labs.withsecure.com/advisories/samsung-s5-arbitary-file-retrieval-during-sbeam-transfer), so you should really uninstall this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.easysettings": {
+    "list": "Oem",
+    "description": "Settings app if you're using the Easy Mode feature on Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.fotaclient": {
+    "list": "Oem",
+    "description": "OTA for legacy Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.fwupgrade": {
+    "list": "Oem",
+    "description": "Updates AllShare components. Since Samsung AllShare is discontinued, this is now useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.Kies": {
+    "list": "Oem",
+    "description": "Required for connecting your device to Samsung Kies, Samsung's long discontinued iTunes competitor. Everything that can be done with Kies can be done with ADB or Heimdall, so there isn't really a point to keeping this.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.mmapp": {
+    "list": "Oem",
+    "description": "Required for Samsung's proprietary music app to work.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.nearby.mediaserver": {
+    "list": "Oem",
+    "description": "Samsung nearby share, part of AllShare. Discontinued.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.SamsungDrmProvider": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless. Content with DRM still works without this package.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.service.bezel": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.service.cm": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.voltesettings": {
+    "list": "Oem",
+    "description": "Needed for VoLTE to function properly, which is a feature a lot of carriers now require.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Expert"
+  },
+  "com.sec.android.wfds.printplugin": {
+    "list": "Oem",
+    "description": "Needed for Wi-Fi direct printing on Samsung devices.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.android.widget.samsungapps": {
+    "list": "Oem",
+    "description": "Widget for Galaxy Apps, showing app suggestions on your home screen.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.android.widgetapp.activeapplicationwidget": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.dsm.phone": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.dsm.system": {
+    "list": "Oem",
+    "description": "Part of Samsung's Find my Mobile service, appears this app is so you can ring your phone if you lost it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.knox.seandroid": {
+    "list": "Oem",
+    "description": "Samsung Knox security features. Can't be disabled or uninstalled without root.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.sec.pcw.device": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.providers.settingsearch": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.sec.setdefaultlauncher": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless. You can still change launchers without this package.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.siso.app.generic": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.siso.app.genericprintservice": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.telenav.app.android.bell": {
+    "list": "Carrier",
+    "description": "Bell Navigator app. It works, but there are much better Maps apps available. https://play.google.com/store/apps/details?id=com.telenav.app.android.bell",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.apple.atve.androidtv.appletv": {
+    "list": "Oem",
+    "description": "Apple TV\nFactory-installed Apple TV app. Reverts to factory-version when uninstalled by normal means.\n(Shipped with Philips Android TVs, but may be present on other devices as well.)\nhttps://play.google.com/store/apps/details?id=com.apple.atve.androidtv.appletv",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.android.networkstack.tethering.inprocess": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.a20.d01.wallpapermulti": {
+    "list": "Oem",
+    "description": "Seems like a completely useless empty package, but the default lock screen wallpaper slideshow stops working if you uninstall this. Wallpapers can still be set fine, so it's still pretty useless.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.samsung.android.timezone.data_R": {
+    "list": "Oem",
+    "description": "Completely empty package. Useless. No issues with the clock after uninstalling",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 }
