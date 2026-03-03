@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/bytedance/sonic v1.15.0
 	github.com/fatih/color v1.18.0
-	github.com/samber/lo v1.52.0
+	github.com/samber/lo v1.53.0
 )
 
 require (
