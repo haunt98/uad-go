@@ -16,7 +16,7 @@ type UADApp struct {
 }
 
 type UnifiedApp struct {
-	ID          string
-	Description string
-	Safe2Remove bool
+	ID            string
+	Description   string
+	IsSafe2Remove bool
 }

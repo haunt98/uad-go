@@ -24,7 +24,7 @@ func main() {
 	findStr = strings.ToLower(strings.TrimSpace(findStr))
 
 	// Include not safe 2 remove
-	risk := strings.EqualFold(os.Getenv("RISK"), "true")
+	enableRisk := strings.EqualFold(os.Getenv("RISK"), "true")
 
 	// For example xiaomi+miui
 	// Use + instead of | because | is unix pipe
@@ -41,23 +41,23 @@ func main() {
 	for _, findFn := range []func(bool, ...string) []UnifiedApp{
 		searchUAD,
 	} {
-		apps = findFn(risk, values...)
+		apps = findFn(enableRisk, values...)
 		if len(apps) != 0 {
 			break
 		}
 	}
 
-	for _, a := range apps {
-		if a.Safe2Remove {
-			color.Green("ID: %s", a.ID)
+	for _, app := range apps {
+		if app.IsSafe2Remove {
+			color.Green("ID: %s", app.ID)
 		} else {
-			color.Red("ID: %s", a.ID)
+			color.Red("ID: %s", app.ID)
 		}
-		fmt.Printf("Description: %s\n\n", a.Description)
+		fmt.Printf("Description: %s\n\n", app.Description)
 	}
 }
 
-func searchUAD(risk bool, values ...string) []UnifiedApp {
+func searchUAD(enableRisk bool, values ...string) []UnifiedApp {
 	uadApps := UADApps{}
 	if err := sonic.Unmarshal(uadBytes, &uadApps); err != nil {
 		log.Fatalf("json: failed to unmarshal: %v", err)
@@ -66,8 +66,9 @@ func searchUAD(risk bool, values ...string) []UnifiedApp {
 
 	apps := make([]UnifiedApp, 0, len(uadApps))
 	for uadAppID, uadApp := range uadApps {
-		safe2Remove := uadApp.Removal == UADRemovalRecommended
-		if !risk && !safe2Remove {
+		isSafe2Remove := uadApp.Removal == UADRemovalRecommended
+		if !enableRisk &&
+			!isSafe2Remove {
 			continue
 		}
 
@@ -100,20 +101,20 @@ func searchUAD(risk bool, values ...string) []UnifiedApp {
 
 		if found {
 			apps = append(apps, UnifiedApp{
-				ID:          uadAppID,
-				Description: uadApp.Description,
-				Safe2Remove: safe2Remove,
+				ID:            uadAppID,
+				Description:   uadApp.Description,
+				IsSafe2Remove: isSafe2Remove,
 			})
 		}
 	}
 
 	// Sort it by safe 2 remove first, then by ID
 	sort.Slice(apps, func(i, j int) bool {
-		if apps[i].Safe2Remove == apps[j].Safe2Remove {
+		if apps[i].IsSafe2Remove == apps[j].IsSafe2Remove {
 			return apps[i].ID < apps[j].ID
 		}
 
-		return apps[i].Safe2Remove
+		return apps[i].IsSafe2Remove
 	})
 
 	return apps
