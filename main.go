@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"sort"
+	"slices"
 	"strings"
 
 	"github.com/bytedance/sonic"
@@ -23,7 +23,7 @@ func main() {
 	}
 	findStr = strings.ToLower(strings.TrimSpace(findStr))
 
-	// Include not safe 2 remove
+	// Include risky apps
 	enableRisk := strings.EqualFold(os.Getenv("RISK"), "true")
 
 	// For example xiaomi+miui
@@ -33,19 +33,23 @@ func main() {
 		return strings.TrimSpace(v) != ""
 	})
 
-	var apps []UnifiedApp
-
-	// Loop all data sources
-	// Stop if found
-	// Otherwise keep going
-	for _, findFn := range []func(bool, ...string) []UnifiedApp{
-		searchUAD,
-	} {
-		apps = findFn(enableRisk, values...)
-		if len(apps) != 0 {
-			break
-		}
+	apps := searchUAD(enableRisk, values...)
+	if len(apps) == 0 {
+		fmt.Println("No app found")
+		return
 	}
+
+	slices.SortFunc(apps, func(a, b UnifiedApp) int {
+		if a.IsSafe2Remove != b.IsSafe2Remove {
+			if a.IsSafe2Remove {
+				return -1
+			}
+
+			return 1
+		}
+
+		return strings.Compare(a.ID, b.ID)
+	})
 
 	for _, app := range apps {
 		if app.IsSafe2Remove {
@@ -53,7 +57,7 @@ func main() {
 		} else {
 			color.Red("ID: %s", app.ID)
 		}
-		fmt.Printf("Description: %s\n\n", app.Description)
+		fmt.Printf("Description: %s\n", app.Description)
 	}
 }
 
@@ -107,15 +111,6 @@ func searchUAD(enableRisk bool, values ...string) []UnifiedApp {
 			})
 		}
 	}
-
-	// Sort it by safe 2 remove first, then by ID
-	sort.Slice(apps, func(i, j int) bool {
-		if apps[i].IsSafe2Remove == apps[j].IsSafe2Remove {
-			return apps[i].ID < apps[j].ID
-		}
-
-		return apps[i].IsSafe2Remove
-	})
 
 	return apps
 }
