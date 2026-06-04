@@ -3,7 +3,7 @@ module github.com/haunt98/uad-go
 go 1.25.0
 
 require (
-	github.com/bytedance/sonic v1.15.1
+	github.com/bytedance/sonic v1.15.2
 	github.com/fatih/color v1.19.0
 	github.com/samber/lo v1.53.0
 )
