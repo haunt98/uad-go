@@ -23,6 +23,14 @@
     "labels": [],
     "removal": "Unsafe"
   },
+  "com.google.android.wearable.pixel.aspen": {
+    "list": "Oem",
+    "description": "Fitbit's Connected Fitness feature for the Pixel Watch. Can be safely removed if you don't need/use it.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
   "org.lineageos.recorder": {
     "list": "Oem",
     "description": "LineageOS Voice Recorder App.\nSafe to remove if you don't need it or have replaced it with another app.",
@@ -362,6 +370,14 @@
   "android.ui.overlay.ct": {
     "list": "Aosp",
     "description": "An overlay that customizes Android UI for the China Telecom operator (3rd largest operator in China).\nSafe to remove if you don't live in china or don't use/plan to use this carrier. Often present on ROMs and devices outside of China.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.xiaomi.aiservice": {
+    "list": "Oem",
+    "description": "Xiaomi on-device AI inference engine (HyperOS/MIUI). Runs many ML models (OCR, translation, etc.) in isolated per-model processes. \nEmbeds Xiaomi's OneTrack SDK, which collects OAID, android_id, device fingerprint, region, network type, and per-event usage data, then uploads it encrypted to tracking.*.miui.com. \nAlso embeds XCrash for crash reporting. Downloads AI model updates silently via Android DownloadManager (probably has to do with AI Core). \nRemoving probably breaks HyperOS AI features (I haven't tested) but does not affect core phone, SMS, or data functions.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -17484,11 +17500,11 @@
   },
   "com.xiaomi.bluetooth": {
     "list": "Oem",
-    "description": "MIUI Bluetooth Extension. Doesn't seem to affect bluetooth functionality. Tested on Poco M4 Pro 5G HyperOS 1.0.1.0. Note: If you deleted (com.xiaomi.xmsf) this package will likely send\"Bluetooth extension stopped working\" errors, uninstalling it removes them.",
+    "description": "MIUI Bluetooth Extension. Doesn't seem to affect bluetooth functionality. Can introduce a ~1s delay when switching audio playback apps; uninstalling fixes this issue. Tested on Poco M4 Pro 5G HyperOS 1.0.1.0. Note: If you deleted (com.xiaomi.xmsf) this package will likely send\"Bluetooth extension stopped working\" errors, uninstalling it removes them.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Expert"
+    "removal": "Recommended"
   },
   "com.xiaomi.bluetooth.overlay": {
     "list": "Oem",
@@ -38629,11 +38645,11 @@
   },
   "com.samsung.oda.service": {
     "list": "Oem",
-    "description": "SamsungOdaService\nRequires google play services.\nAnother spying app collects sim info and other things.",
+    "description": "SamsungOdaService\nDisabling causes SIM Manager to instantly crash on dual sim setup.Requires google play services.\nAnother spying app collects sim info and other things.",
     "dependencies": [],
-    "neededBy": [],
+    "neededBy": ["com.samsung.android.app.telephonyui"],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Advanced"
   },
   "com.samsung.android.smartprovider": {
     "list": "Oem",
@@ -41101,7 +41117,7 @@
   },
   "com.blackview.filetrans": {
     "list": "Oem",
-    "description": "Moving Assistant/Data Migration Assistant\nApp used to transfer data from one device to another.\nWARNING: Uninstalling it breaks the App info Settings page on Android 15, Blackview Tab 60 WiFi.",
+    "description": "Moving Assistant/Data Migration Assistant\nApp used to transfer data from one device to another.\nWARNING: Uninstalling it breaks the App info Settings page on Android 15, Blackview Tab 60 WiFi.\nTry disabling instead of uninstalling in case that happens.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
@@ -42093,11 +42109,11 @@
   },
   "com.android.networkstack.tethering.inprocess": {
     "list": "Oem",
-    "description": "Completely empty package. Useless.",
+    "description": "Causes a lockscreen loop on some Xiaomi devices. Provides TetherableWifiRegexs, the lack of which crashes systemui and miui.home.",
     "dependencies": [],
     "neededBy": [],
     "labels": [],
-    "removal": "Recommended"
+    "removal": "Unsafe"
   },
   "com.samsung.android.a20.d01.wallpapermulti": {
     "list": "Oem",
@@ -43010,5 +43026,53 @@
     "neededBy": [],
     "labels": [],
     "removal": "Expert"
+  },
+  "com.blackview.systemmanager": {
+    "list": "Oem",
+    "description": "'System Manager'\nA pre-installed 'task killer', which ironically slows down the system. It also has internet and install apps permisions by default, making it a potential backdoor.\nAlthough 'systemmanager' might sound important, disabling it will significantly reduce scroll stuttering. Try disabling instead of uninstalling in case that breaks the App info Settings page.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.blackview.apkupgrade": {
+    "list": "Oem",
+    "description": "System Message\nAdware, sends unwanted promotional notifications.\nTry disabling instead of uninstalling in case that breaks the App info Settings page.\nhttps://www.reddit.com/r/blackview/comments/1mo441x/get_rid_of_system_notification_that_contains_ads/",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.huawei.localBackup": {
+    "list": "Oem",
+    "description": "Backup\nA hidden app, which has storage, location, contacts, SMS, call logs and calendar permissions. Can be uninstalled via Settings.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.huawei.aml": {
+    "list": "Oem",
+    "description": "Huawei AML\nA hidden app, which has phone, location and SMS permissions.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
+  },
+  "com.blackview.helper": {
+    "list": "Oem",
+    "description": "DKHelper\nTry disabling instead of uninstalling in case that breaks the App info Settings page.",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Advanced"
+  },
+  "com.softwinner.dragonatt": {
+    "list": "Oem",
+    "description": "DragonAtt",
+    "dependencies": [],
+    "neededBy": [],
+    "labels": [],
+    "removal": "Recommended"
   }
 }
